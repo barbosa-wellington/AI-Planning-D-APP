@@ -3,6 +3,7 @@ import {ENV} from "./config/env.js";
 
 import {db} from  "./config/db.js";
 import { favoritesTable } from "./db/schema.js";
+import { eq } from "drizzle-orm";
 // the dotenv will ensure that the listening port will be 5001 from the env file.
 // import "dotenv/config"
 
@@ -16,7 +17,7 @@ app.get("/api/health", (req,res) => {
     res.status(200).json({success:true});
 });
 
-
+// Creating endpoint
 app.post("/api/favorites", async (req,res) => {
     try {
         const { userId, recipeId, title, image, cookTime, servings} = req.body;
@@ -44,6 +45,25 @@ app.post("/api/favorites", async (req,res) => {
         
     }
 });
+
+app.delete("/api/favorites/:userId/:recipeId", async (req, res) => {
+    try {
+
+        const {userId, recipeId} = req.params
+
+        await db.delete(favoritesTable).where(
+            and(eq(favoritesTable.userId,userId), eq(favoritesTable.recipeId, parseInt(recipeId)))
+        )
+
+        res.status(200).json({message: "Favorite removed successfully"});
+    } catch (error) {
+        console.log("Error removing a favorite", error);
+        res.status(500).json({ error: "Something went wrong - removed cancelled"});
+
+    }
+});
+
+
 
 app.listen(PORT, () => {
     console.log("Server is running on PORT:", PORT)
