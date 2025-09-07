@@ -3,7 +3,8 @@ import {ENV} from "./config/env.js";
 
 import {db} from  "./config/db.js";
 import { favoritesTable } from "./db/schema.js";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
+import { drizzle } from "drizzle-orm/neon-http";
 // the dotenv will ensure that the listening port will be 5001 from the env file.
 // import "dotenv/config"
 
@@ -46,21 +47,25 @@ app.post("/api/favorites", async (req,res) => {
     }
 });
 
+// this command will only work once the drizzle-orm is import with the and function
 app.delete("/api/favorites/:userId/:recipeId", async (req, res) => {
     try {
+        const { userId, recipeId } = req.params;
 
-        const {userId, recipeId} = req.params
+        await db
 
-        await db.delete(favoritesTable).where(
-            and(eq(favoritesTable.userId,userId), eq(favoritesTable.recipeId, parseInt(recipeId)))
-        )
+            .delete(favoritesTable)
+            .where(
+                and(eq(favoritesTable.userId, userId), eq(favoritesTable.recipeId, parseInt(recipeId)))
+            );
 
-        res.status(200).json({message: "Favorite removed successfully"});
+        res.status(200).json({ message: "Favorite removed successfully"});
+
     } catch (error) {
         console.log("Error removing a favorite", error);
-        res.status(500).json({ error: "Something went wrong - removed cancelled"});
-
+        res.status(500).json({ error: "Something went wrong"});
     }
+
 });
 
 
