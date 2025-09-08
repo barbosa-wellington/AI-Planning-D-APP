@@ -47,7 +47,6 @@ app.post("/api/favorites", async (req,res) => {
     }
 });
 
-
 // get the favorite item by using the userId as a search parameter
 app.get("/api/favorites/:userId", async (req,res) => {
     try {
@@ -90,8 +89,6 @@ app.delete("/api/favorites/:userId/:recipeId", async (req, res) => {
     }
 
 });
-
-
 
 app.listen(PORT, () => {
     console.log("Server is running on PORT:", PORT)
