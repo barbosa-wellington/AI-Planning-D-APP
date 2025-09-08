@@ -47,7 +47,30 @@ app.post("/api/favorites", async (req,res) => {
     }
 });
 
-// this command will only work once the drizzle-orm is import with the and function
+
+// get the favorite item by using the userId as a search parameter
+app.get("/api/favorites/:userId", async (req,res) => {
+    try {
+
+        const { userId } = req.params;
+
+        const userFavorites = await db
+            .select()
+            .from(favoritesTable)
+            .where(eq(favoritesTable.userId, userId));
+        
+        res.status(200).json(userFavorites);
+    } catch (error) {
+
+        console.log("Error fetching the favorite", error);
+        res.status(500).json({ error: "Something went wrong"});
+        
+    }
+});
+
+
+// this command will only work once the drizzle-orm is import with the {and} function
+// detele a entry using the userId and recipeId
 app.delete("/api/favorites/:userId/:recipeId", async (req, res) => {
     try {
         const { userId, recipeId } = req.params;
