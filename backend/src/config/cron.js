@@ -2,7 +2,7 @@ import cron from "cron";
 import https from "https";
 
 // Sending a request every 14min to keep the API running.
-const job =  new cron.CronJob("*/13jfjjf", function (){
+const job =  new cron.CronJob("*/14****", function (){
     https
     .get(process.env.API_URL, (res) => {
         if (res.statusCode == 200) console.log("GET request sent successfully");

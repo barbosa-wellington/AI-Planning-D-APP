@@ -5,11 +5,15 @@ import {db} from  "./config/db.js";
 import { favoritesTable } from "./db/schema.js";
 import { and, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/neon-http";
+
+import job from "./config/cron.js";
+
 // the dotenv will ensure that the listening port will be 5001 from the env file.
 // import "dotenv/config"
 
 const app = express()
 const PORT = ENV.PORT || 5001;
+if (ENV.NODE_ENV === "production") job.start();
 
 app.use(express.json())
 
