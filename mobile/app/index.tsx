@@ -11,7 +11,7 @@ export default function Index() {
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
       <Text> We are going to far on our studies approach.</Text>
-      <Text> Fancinating thing to learn.
+      <Text style={{ color: "red"}}> Fancinating thing to learn.
       </Text>
     </View>
   );
