@@ -1,6 +1,5 @@
-import { StyleSheet, Text, TextInput, Touchable, TouchableOpacity, View } from "react-native";
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import {Image} from "expo-image"
-import reactLongo from "@/assets/images/react-logo.png";
 import { Link } from "expo-router";
 
 
@@ -14,7 +13,10 @@ export default function Index() {
           <Text>click me</Text>
       </TouchableOpacity>
         
-      <Link href={"/about"}>Visit about screen
+
+      <Link href={"/about"}>
+      visit about screen
+
       </Link>
       </View>
   );

@@ -2,7 +2,7 @@ import { View, Text} from 'react-native'
 const AboutScreen = () => {
     return (
         <View>
-            <Text>about</Text>
+            <Text>This is about page created for test.</Text>
         </View>
     );
 };
