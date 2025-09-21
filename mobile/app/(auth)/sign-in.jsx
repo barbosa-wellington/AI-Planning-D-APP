@@ -6,12 +6,17 @@ import { useSignIn } from "@clerk/clerk-expo";
 
 // import { authStyles } from "../../assets/styles/auth.styles"
 const SignInScreen = () => {
+    const router = useRouter();
+    const { signIn, setActive, isLoaded } = useSignIn();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    // jsx is case sentitive so, False is different from false
+    const [showPassword, setShowPassword] = useState(False);
+    const [loading, setLoading] = useState(false);
     return (
         <View>
             <Text>This is a test of SignInScreen</Text>
             <Text>SignInScreen</Text>
-            <Text>One more line of code</Text>
-            <Text>One more line of code</Text>
         </View>
     );
 };
