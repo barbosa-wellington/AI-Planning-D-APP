@@ -50,7 +50,7 @@ const SignInScreen = () => {
             <Text>This is a test of SignInScreen</Text>
             <Text>SignInScreen</Text>
             <Text>Trying set the screen layout.</Text>
-            {/* <Text>Working on a bug import library</Text> */}
+            <Text>Working on a bug import library</Text>
         </View>
     );
 };
