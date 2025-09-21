@@ -3,7 +3,7 @@ import { View, Text, Alert } from 'react-native';
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { useSignIn } from "@clerk/clerk-expo";
-// import { authStyles } from '../../assets/styles/auth.styles';
+import { authStyles } from '../../assets/styles/auth.styles';
 
 const SignInScreen = () => {
     const router = useRouter();
