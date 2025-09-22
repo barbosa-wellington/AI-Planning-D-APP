@@ -86,6 +86,28 @@ const roseGoldTheme = {
   shadow: "#000000",
 };
 
+// Costomize color theme
+const dietAIOceanTheme = {
+  // Keep your ocean blues but add health greens
+  primary: "#0277BD",           // Your ocean blue
+  secondary: "#10B981",         // Health green
+  
+  background: "#E1F5FE",        // Your light cyan
+  backgroundAlt: "#F0F9FF",     // Slightly more neutral
+  
+  text: "#01579B",              // Your dark blue
+  textSecondary: "#047857",     // Dark green for variety
+  textLight: "#4FC3F7",         // Your light blue
+  
+  border: "#B3E5FC",            // Your light blue border
+  card: "#FFFFFF",              // White cards
+  
+  // Additional colors for diet app
+  success: "#059669",           // Ocean-tinted green
+  warning: "#0891B2",           // Ocean-tinted orange
+  accent: "#7C3AED",            // Purple accent
+}
+
 export const THEMES = {
   coffee: coffeeTheme,
   forest: forestTheme,
@@ -95,7 +117,8 @@ export const THEMES = {
   mint: mintTheme,
   midnight: midnightTheme,
   roseGold: roseGoldTheme,
+  dieAI: dietAIOceanTheme,
 };
 
 // 👇 change this to switch theme
-export const COLORS = THEMES.purple;
+export const COLORS = THEMES.coffee;
