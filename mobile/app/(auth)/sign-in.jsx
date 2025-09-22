@@ -57,6 +57,7 @@ const SignInScreen = () => {
             <KeyboardAvoidingView
                 style={authStyles.keyboardView}
                 behavior={Platform.OS === "ios" ? "padding":"height"}
+                keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}
             >
                 <ScrollView
                     contentContainerStyle={authStyles.scrollContent}
@@ -109,15 +110,35 @@ const SignInScreen = () => {
                                 color={COLORS.textLight}
                             />
                         </TouchableOpacity>
-                            
-                        
                     </View>
+
+                    {/* Adding signin botton */}
+                    <TouchableOpacity
+                    style={[authStyles.authButton, loading && authStyles.buttonDisabled]}
+                    onPress={handleSignIn}
+                    disabled={loading}
+                    activeOpacity={0.8}
+                    >
+                        <Text style={authStyles.buttonText}>{loading ? "Signing In..": "Sign In"}</Text>
+
+                    </TouchableOpacity>
+
+                    {/* Sign Up Link */}
+                    {/* This touchable function redirect the user to the sign-up page. */}
+                    <TouchableOpacity
+                    style={authStyles.linkContainer}
+                    onPress={() => router.push("/(auth)/sign-up")}
+                    >
+                        <Text style={authStyles.linkText}>
+                            Don&apos;t have an account? 
+                        <Text style={authStyles.link}>Sign up</Text>
+                        </Text>
+
+                    </TouchableOpacity>
                 </View>
                 </ScrollView>
-
             </KeyboardAvoidingView>
-            {/* <Text >This is a test of SignInScreen</Text> */}
-            
+            {/* <Text >This is a test of SignInScreen</Text> */}     
         </View>
     );
 };
