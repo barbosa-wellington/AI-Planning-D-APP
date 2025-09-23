@@ -1,7 +1,14 @@
-import { View, Text, Alert } from 'react-native';
+import { View, Text, Alert, KeyboardAvoidingView, Platform, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSignUp } from "@clerk/clerk-expo";
 import { useState } from 'react';
+import { authStyles } from '../../assets/styles/auth.styles';
+
+// Import for the image href
+import { Image } from "expo-image";
+import { COLORS } from '../../constants/colors';
+import { Ionicons } from "@expo/vector-icons";
+import { routePatternToRegex } from 'expo-router/build/fork/getStateFromPath-forks';
 
 const SignUpScreen = () => {
 
@@ -42,11 +49,8 @@ const handleSignUp = async () => {
 
 };
 
-    return (
-        <View>
-            <Text>This is a test of SignUpScreen</Text>
-            <Text>SignInScreen</Text>
-        </View>
-    );
+if (pendingVerification) return <Text>"pending ui will go here";</Text>;
+
+    
 };
 export default SignUpScreen;
