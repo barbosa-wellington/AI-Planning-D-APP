@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { useSignUp } from "@clerk/clerk-expo";
 import { useState } from 'react';
 import { authStyles } from '../../assets/styles/auth.styles';
+import VerifyEmail from "./verify-email";
 
 // Import for the image href
 import { Image } from "expo-image";
@@ -49,7 +50,9 @@ const handleSignUp = async () => {
 
 };
 
-if (pendingVerification) return <Text>"pending ui will go here";</Text>;
+
+// This validation will only ocurr if the VerifyEmail import is on this class.
+if (pendingVerification) return <VerifyEmail email={email} onBack={() => setPendingVerification(false)}/>
 
 return(
 
