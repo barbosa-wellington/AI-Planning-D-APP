@@ -23,11 +23,11 @@ const VerifyEmail = ({email, onBack}) => {
             if(signUpAttempt.status === "Complete"){
                 await setActive({session:signUpAttempt.createdSessionId});
             } else {
-                Alert.Alert("Error", "Verification failed. Please try again.");
+                Alert.alert("Error", "Verification failed. Please try again.");
                 console.error(JSON.stringify(signUpAttempt, null, 2));
             }
         } catch (error) {
-            Alert.Alert("Error", "Verification failed. Please try again.");
+            Alert.alert("Error", "Verification failed. Please try again.");
             console.error(JSON.stringify(signUpAttempt, null, 2));
             
         } finally {
