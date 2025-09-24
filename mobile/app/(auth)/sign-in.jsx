@@ -42,11 +42,11 @@ const SignInScreen = () => {
                 await setActive({session:signInAttempt.createSessionId})
             } else {
                 Alert.alert("Error", "Sign in failed. Please try again.");
-                console.error(JSON.stringify(signInAttemptm, null, 2));
+                console.error(JSON.stringify(signInAttempt, null, 2));
             }
         } catch (error) {
             Alert.alert("Error", error.errors?.[0]?.message || "Sign in failed");
-            console.error(JSON.stringify(signInAttemptm, null, 2));
+            console.error(JSON.stringify(error, null, 2));
         } finally {
             setLoading(false)
 
