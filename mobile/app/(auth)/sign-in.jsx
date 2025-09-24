@@ -20,7 +20,8 @@ const SignInScreen = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
 
-
+// Define a signIn fuction that validation 
+// empty fields, character lenth
     const handleSignIn = async () => {
         if(!email || !password){
             Alert.alert("Error", "Please fill in all fields.")

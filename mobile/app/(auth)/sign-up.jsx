@@ -23,6 +23,7 @@ const SignUpScreen = () => {
     const [pendingVerification, setPendingVerification] = useState(false);
 
 // create a function to handle the signUp bottom action.
+// This fuction is details on the clerk webpage.
 const handleSignUp = async () => {
     if(!email || ! password) return Alert.alert("Error", "Please fill in all fields");
     // option check of a password length
@@ -52,6 +53,7 @@ const handleSignUp = async () => {
 
 
 // This validation will only ocurr if the VerifyEmail import is on this class.
+// the pendingStage is the screen where the user needs to enter the validation code.
 if (pendingVerification) return <VerifyEmail email={email} onBack={() => setPendingVerification(false)}/>
 
 return(
