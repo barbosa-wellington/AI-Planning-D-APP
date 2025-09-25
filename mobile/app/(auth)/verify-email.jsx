@@ -28,7 +28,8 @@ const VerifyEmail = ({email, onBack}) => {
             }
         } catch (error) {
             Alert.alert("Error", "Verification failed. Please try again.");
-            console.error(JSON.stringify(signUpAttempt, null, 2));
+            // console.error(JSON.stringify(signUpAttempt, null, 2));
+            console.error("Verification error", error);
             
         } finally {
             setLoading(false);
