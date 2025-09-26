@@ -15,6 +15,7 @@ const HomeScreen = () => {
       <Text>HomeScreen This is a test page. Last test</Text>
 
       {/* Floating AI Chat Button */}
+      {/* Create the icon of chat and add a redirect for a page service. */}
       <TouchableOpacity
         style={styles.chatButton}
         onPress={() => alert("AI Chat opened!")}
