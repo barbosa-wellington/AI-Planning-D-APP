@@ -39,7 +39,7 @@ const TabsLayout = () => {
                 name="user_profile"
                 options={{
                     title:"profile",
-                    tabBarIcon: ({color, size}) => <Ionicons name="cloudflare" size={size}
+                    tabBarIcon: ({color, size}) => <Ionicons name="person-circle-outline" size={size}
                     color={color} />
                 }}
             />
