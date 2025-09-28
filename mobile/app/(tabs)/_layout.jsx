@@ -8,6 +8,7 @@ const TabsLayout = () => {
     if (!isSignedIn) return <Redirect href={"/(auth)/sign-in"} />;
     return (
 
+        // <Stack />
         // return tabs as the respetives screen on the application.
         <Tabs>
             <Tabs.Screen
@@ -35,7 +36,6 @@ const TabsLayout = () => {
                 }}
             />
             <Tabs.Screen
-            // Fix icon user profile
                 name="user_profile"
                 options={{
                     title:"profile",
@@ -44,11 +44,10 @@ const TabsLayout = () => {
                 }}
             />
             {/* <Tabs.Screen
-            // Fix icon user profile
                 name="ai_assistant"
                 options={{
                     title:"ai",
-                    tabBarIcon: ({color, size}) => <Ionicons name="heart" size={size}
+                    tabBarIcon: ({color, size}) => <Ionicons name="settings_account_box" size={size}
                     color={color} />
                 }}
             /> */}

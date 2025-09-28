@@ -1,8 +1,16 @@
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import React from "react";
 
+import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
-
+// // Add this function in your component
+// const handleChatPress = () => {
+//   // Navigate to chat screen (you'll create this later)
+//   router.push('/ai_assistant');
+//   // Or for now, just log
+//   console.log('AI Chat pressed');
+// };
 const HomeScreen = () => {
 
 
@@ -15,48 +23,39 @@ const HomeScreen = () => {
 
       {/* Floating AI Chat Button */}
       {/* Create the icon of chat and add a redirect for a page service. */}
-      {/* <TouchableOpacity
-        style={styles.chatButton}
-        onPress={() => alert("AI Chat opened!")}
-      >
-        <Image
-          source={require("../../assets/images/ai-icon.png")} // adjust path if needed
-          style={styles.chatIcon}
-        />
-      </TouchableOpacity> */}
+      {/* // Add this JSX right before your closing </View> or </SafeAreaView> */}
+          {/* <TouchableOpacity 
+            style={styles.floatingButton}
+            onPress={handleChatPress}
+            activeOpacity={0.8}
+          >
+            <Ionicons name="chatbubbles" size={28} color="white" />
+          </TouchableOpacity> */}
     </View>
   );
 };
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: "center",
-//     alignItems: "center",
-//     backgroundColor: "#fff",
-//   },
-//   title: {
-//     fontSize: 20,
-//     fontWeight: "bold",
-//     marginBottom: 10,
-//   },
-//   chatButton: {
-//     position: "absolute",
-//     bottom: 30,
-//     right: 30,
-//     backgroundColor: "#007AFF",
-//     borderRadius: 50,
-//     padding: 12,
-//     elevation: 5,
-//     shadowColor: "#000",
-//     shadowOffset: { width: 0, height: 2 },
-//     shadowOpacity: 0.3,
-//     shadowRadius: 4,
-//   },
-//   chatIcon: {
-//     width: 28,
-//     height: 28,
-//     tintColor: "white", // remove if you want the original colors
-//     resizeMode: "contain",
-//   },
-// });
+
+
+// Add these styles to your StyleSheet.create({})
+const styles = StyleSheet.create({
+  // ... your existing styles
+  
+  floatingButton: {
+    position: 'absolute',
+    bottom: 24,
+    right: 24,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: '#3B82F6',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#3B82F6',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+});
+
 export default HomeScreen;

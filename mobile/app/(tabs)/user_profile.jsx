@@ -8,7 +8,7 @@ const user_profile = () => {
     return (
         <View>
       {/* Page Content */}
-      <Text>favorites This is a test page.</Text>
+      <Text>User profile This is a test page.</Text>
       
 
     </View>
