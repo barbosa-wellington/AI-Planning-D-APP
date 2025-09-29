@@ -1,6 +1,6 @@
 🚀 PROJECT: AI-Planning-D-APP
 📍 PATH: C:\Users\user\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 23/09/2025, 2:56:16 pm
+📅 GENERATED: 29/09/2025, 8:44:30 pm
 
 📁 PROJECT STRUCTURE:
 ==================================================
@@ -12,7 +12,7 @@
 │   ├── 📄 package.json (526B)
 │   └── 📁 src/
 │       ├── 📁 config/
-│       │   ├── 📄 cron.js (484B)
+│       │   ├── 📄 cron.js (542B)
 │       │   ├── 📄 db.js (334B)
 │       │   └── 📄 env.js (214B)
 │       ├── 📁 db/
@@ -30,17 +30,22 @@
 │   ├── 📁 app/
 │   │   ├── 📁 (auth)/
 │   │   │   ├── 📄 sign-in.jsx (6.1KB)
-│   │   │   ├── 📄 sign-up.jsx (267B)
-│   │   │   ├── 📄 verify-email.jsx (264B)
-│   │   │   └── 📄 _layout.tsx (364B)
+│   │   │   ├── 📄 sign-up.jsx (6.4KB)
+│   │   │   ├── 📄 verify-email.jsx (4.8KB)
+│   │   │   └── 📄 _layout.tsx (429B)
 │   │   ├── 📁 (tabs)/
-│   │   │   ├── 📄 index.jsx (275B)
-│   │   │   ├── 📄 maindashboard.jsx (7.0KB)
-│   │   │   └── 📄 _layout.jsx (307B)
-│   │   └── 📄 _layout.tsx (630B)
+│   │   │   ├── 📄 ai_assistant.jsx (308B)
+│   │   │   ├── 📄 favorites.jsx (274B)
+│   │   │   ├── 📄 food_search.jsx (280B)
+│   │   │   ├── 📄 index.jsx (1.7KB)
+│   │   │   ├── 📄 user_profile.jsx (283B)
+│   │   │   └── 📄 _layout.jsx (2.9KB)
+│   │   └── 📄 _layout.tsx (743B)
 │   ├── 📄 app.json (1.2KB)
 │   ├── 📁 assets/
 │   │   ├── 📁 images/
+│   │   │   ├── 📄 ai-icon.png (5.3KB)
+│   │   │   ├── 📄 ai-icon1.png (1.6KB)
 │   │   │   ├── 📄 android-icon-background.png (17.1KB)
 │   │   │   ├── 📄 android-icon-foreground.png (76.9KB)
 │   │   │   ├── 📄 android-icon-monochrome.png (4.0KB)
@@ -69,18 +74,20 @@
 │   │       ├── 📄 home.styles.js (5.2KB)
 │   │       ├── 📄 recipe-details.styles.js (7.3KB)
 │   │       └── 📄 search.styles.js (2.6KB)
+│   ├── 📁 components/
+│   │   └── 📄 SafeScreen.jsx (458B)
 │   ├── 📁 constants/
 │   │   └── 📄 colors.js (2.7KB)
 │   ├── 📄 eslint.config.js (237B)
 │   ├── 📄 expo-env.d.ts (110B)
-│   ├── 📄 package-lock.json (522.3KB)
+│   ├── 📄 package-lock.json (523.8KB)
 │   ├── 📄 package.json (1.4KB)
 │   ├── 📄 README.md (1.7KB)
 │   ├── 📁 services/
 │   │   └── 📄 mealAPI.js (0B)
 │   └── 📄 tsconfig.json (242B)
 ├── 📄 project-mapper.js (5.5KB)
-└── 📄 README.md (36B)
+└── 📄 README.md (483B)
 
 📋 IMPORTANT FILE CONTENTS:
 ==================================================
@@ -295,6 +302,13 @@ module.exports = { generateProjectMap };
 -----------
 # AI-Planning-D-APP
 Testing project
+
+#👨‍💻 About This Project 
+
+This project was developed as part of the Work Integrated Learning at university of Torrens. It present a practical application using a Large Language Model to build-up a personalized diet planning for users. This is a real-world problems and showcases skills in:
+
+Skills Showcased: Python, TensorFlow/Keras, JavaScript, PostGress, React, Model Training, Software Architecture, Technical Documentation
+
 
 ==================================================
 
