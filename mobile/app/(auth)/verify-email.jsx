@@ -20,16 +20,24 @@ const VerifyEmail = ({email, onBack}) => {
         try {
             const signUpAttempt = await signUp.attemptEmailAddressVerification({code})
 
-            if(signUpAttempt.status === "Complete"){
+            // fixing the check status with the correct clerk string as lower-case
+            if(signUpAttempt.status === "complete"){
                 await setActive({session:signUpAttempt.createdSessionId});
             } else {
+                // Alert.alert("Error", "Verification failed. Please try again.");
+                // console.error(JSON.stringify(signUpAttempt, null, 2));
                 Alert.alert("Error", "Verification failed. Please try again.");
-                console.error(JSON.stringify(signUpAttempt, null, 2));
+            // Log specific properties for a precise debug
+            console.error("SignUp attempt status:", signUpAttempt.status);
+            console.error("SignUp attempt details:", { status: signUpAttempt.status, createdSessionId: signUpAttempt.createdSessionId,
+                // Add any other specific fields you want to see
+            });
             }
         } catch (error) {
             Alert.alert("Error", "Verification failed. Please try again.");
             // console.error(JSON.stringify(signUpAttempt, null, 2));
-            console.error("Verification error", error);
+            // console.error("Verification error", error);
+            console.error("Verification error:", error.message || error.toString());
             
         } finally {
             setLoading(false);
