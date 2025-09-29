@@ -2,6 +2,7 @@ import cron from "cron";
 import https from "https";
 
 // Sending a request every 14min to keep the API running.
+// the console.log message is printing on the render log
 const job =  new cron.CronJob("*/14 * * * *", function (){
     https
     .get(process.env.API_URL, (res) => {

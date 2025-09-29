@@ -14,6 +14,7 @@ import job from "./config/cron.js";
 const app = express()
 const PORT = ENV.PORT || 5001;
 
+// for production application this job can be delete.
 if (ENV.NODE_ENV === "production") job.start();
 
 app.use(express.json())
