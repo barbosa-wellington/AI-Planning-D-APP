@@ -18,7 +18,7 @@ const HomeScreen = () => {
         <View>
       {/* Page Content */}
       <Text >HomeScreen This is a test page.</Text>
-      <Text>HomeScreen This is a test page. Last test</Text>
+      {/* <Text>HomeScreen This is a test page. Last test</Text> */}
 
 
       {/* Floating AI Chat Button */}
@@ -36,26 +36,26 @@ const HomeScreen = () => {
 };
 
 
-// Add these styles to your StyleSheet.create({})
-const styles = StyleSheet.create({
-  // ... your existing styles
+// // Add these styles to your StyleSheet.create({})
+// const styles = StyleSheet.create({
+//   // ... your existing styles
   
-  floatingButton: {
-    position: 'absolute',
-    bottom: 24,
-    right: 24,
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    backgroundColor: '#3B82F6',
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#3B82F6',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 8,
-  },
-});
+//   floatingButton: {
+//     position: 'absolute',
+//     bottom: 24,
+//     right: 24,
+//     width: 56,
+//     height: 56,
+//     borderRadius: 28,
+//     backgroundColor: '#3B82F6',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     shadowColor: '#3B82F6',
+//     shadowOffset: { width: 0, height: 4 },
+//     shadowOpacity: 0.3,
+//     shadowRadius: 8,
+//     elevation: 8,
+//   },
+// });
 
 export default HomeScreen;

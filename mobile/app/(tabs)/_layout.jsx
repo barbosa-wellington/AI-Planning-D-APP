@@ -11,22 +11,29 @@ const TabsLayout = () => {
 
         // <Stack />
         // return tabs as the respetives screen on the application.
+        // Adding tab layout for screen selection
         <Tabs screenOptions={{
-            headerShown:false,
-            tabBarActiveTintColor: COLORS.primary,
-            tabBarInactiveTintColor: COLORS.textLight,
-            tabBarStyle:{
-                backgroundColor: COLORS.white,
-                borderTopColor: COLORS.border,
-                borderTopWidth: 1,
+            headerShown: false,
+            // 👇 REPLACE YOUR OLD screenOptions WITH THIS:
+            tabBarActiveTintColor: '#147ac8ff', // Orange-500
+            tabBarInactiveTintColor: '#9ca3af', // Gray-400
+            tabBarStyle: {
+                backgroundColor: '#ffffff',
+                borderTopWidth: 0,
+                elevation: 20, // Android shadow
+                shadowColor: '#000', // iOS shadow
+                shadowOffset: { width: 0, height: -4 },
+                shadowOpacity: 0.1,
+                shadowRadius: 12,
+                borderRadius: 30,
+                marginHorizontal: 16,
+                marginBottom: 16,
                 paddingBottom: 8,
-                paddingTop: 8,
-                height: 80,
+                position: 'absolute',
             },
-            tabBarLabelStyle: {
-                fontSize: 12,
-                fontWeight: "600",
-            }
+            tabBarItemStyle: {
+                paddingVertical: 8,
+            },
         }}>
             <Tabs.Screen
                 name="index"
