@@ -1,3 +1,5 @@
+//  Link API for food database
+
 // API-1 = https://fdc.nal.usda.gov/api-guide
 
 
@@ -10,3 +12,7 @@
 // API-5 = https://fnnbri.quadram.ac.uk/tools/
 
 // API-6 = https://www.tbca.net.br/base-dados-en/search_by_component.php
+
+// Link API for Biometric data consumption.
+
+//  API-1 = https://myfitnesspalapi.com/docs/access-tokens/
