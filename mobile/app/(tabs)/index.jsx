@@ -18,6 +18,7 @@ const HomeScreen = () => {
         <View>
       {/* Page Content */}
       <Text >HomeScreen This is a test page.</Text>
+      <Text> Starting working on the development of APIs</Text>
       {/* <Text>HomeScreen This is a test page. Last test</Text> */}
 
 
