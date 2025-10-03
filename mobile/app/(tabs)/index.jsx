@@ -4,6 +4,8 @@ import React from "react";
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 
+import { useAuth } from "@clerk/clerk-expo";
+
 // // Add this function in your component
 // const handleChatPress = () => {
 //   // Navigate to chat screen (you'll create this later)
