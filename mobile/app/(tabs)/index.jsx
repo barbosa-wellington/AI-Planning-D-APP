@@ -28,11 +28,11 @@ const HomeScreen = () => {
 
 {/* Define the bottom for logoff */}
       <TouchableOpacity
-      style={StyleSheet.logoutButton}
+      style={styles.logoutButton}
       onPress={()=> signOut()}
       
       >
-        <Text style={StyleSheet.logoutText}> Log Out</Text>
+        <Text style={styles.logoutText}> Log Out</Text>
       </TouchableOpacity>
 
 
