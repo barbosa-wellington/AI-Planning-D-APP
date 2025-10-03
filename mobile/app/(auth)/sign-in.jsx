@@ -28,9 +28,9 @@ const SignInScreen = () => {
             return
         }
 
-        if(isLoaded) return;
+        if(!isLoaded) return;
 
-        setLoading(True)
+        setLoading(true)
 
         try {
             const signInAttempt = await signIn.create({
@@ -38,8 +38,9 @@ const SignInScreen = () => {
                 password
             })
 
-            if(signInAttempt.status === "Complete") {
-                await setActive({session:signInAttempt.createSessionId})
+            if(signInAttempt.status === "complete") {
+                // fixing bug created not create
+                await setActive({session:signInAttempt.createdSessionId})
             } else {
                 Alert.alert("Error", "Sign in failed. Please try again.");
                 console.error(JSON.stringify(signInAttempt, null, 2));
