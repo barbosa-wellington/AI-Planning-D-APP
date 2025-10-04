@@ -69,8 +69,8 @@ const SignInScreen = () => {
                         {/* image component reference */}
                         {/* access the image from the folder images */}
                         <Image 
-                        source={require("../../assets/images/dinner_8730485.png")}
-                        style={authStyles.image}
+                        source={require("../../assets/images/dietly-logo-v2.png")}
+                        style={authStyles.logo}
                         contentFit='contain'/>
                         
                     </View>
@@ -145,3 +145,4 @@ const SignInScreen = () => {
     );
 };
 export default SignInScreen;
+

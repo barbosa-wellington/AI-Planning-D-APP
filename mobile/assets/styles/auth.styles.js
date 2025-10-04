@@ -90,4 +90,10 @@ export const authStyles = StyleSheet.create({
     color: COLORS.primary,
     fontWeight: "600",
   },
+  logo: {
+    width: 120,        // smaller than landing page
+    height: 120,
+    marginBottom: 20,
+    alignSelf: "center",
+  }
 });
