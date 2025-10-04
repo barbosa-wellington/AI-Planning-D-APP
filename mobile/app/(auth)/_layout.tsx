@@ -7,8 +7,11 @@ export default function AuthRoutesLayout() {
 
   // If user signIn then he will be redirect to the home page.
   if (isSignedIn) {
-    return <Redirect href={'/'} />;
+    return <Redirect href={'/(tabs)'} />;
   }
 
-  return <Stack screenOptions={{ headerShown: false}} />
+
+  return <Stack screenOptions={{ headerShown: false}}
+
+  />
 }
