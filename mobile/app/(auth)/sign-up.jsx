@@ -74,8 +74,8 @@ return(
                 {/* import must be implace to use it. */}
                 <View style={authStyles.imageContainer}>
                     <Image
-                        source={require("../../assets/images/i2.png")}
-                        style={authStyles.image}
+                        source={require("../../assets/images/dietly-logo-v2.png")}
+                        style={authStyles.logo}
                         contenFit="contain"
                     />
                 </View>

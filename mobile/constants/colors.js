@@ -108,6 +108,20 @@ const dietAIOceanTheme = {
   accent: "#7C3AED",            // Purple accent
 }
 
+const dietlyTheme = {
+  background: "#F0FDF4",
+  primary: "#10B981",
+  secondary: "#3B82F6",
+  accent: "#14B8A6",
+  text: "#111827",
+  textLight: "#6B7280",
+  border: "#D1D5DB",
+  success: "#22C55E",
+  warning: "#F59E0B",
+  error: "#EF4444",
+  white: "#FFFFFF",
+};
+
 export const THEMES = {
   coffee: coffeeTheme,
   forest: forestTheme,
@@ -118,7 +132,8 @@ export const THEMES = {
   midnight: midnightTheme,
   roseGold: roseGoldTheme,
   dieAI: dietAIOceanTheme,
+  dietly: dietlyTheme,
 };
 
 // 👇 change this to switch theme
-export const COLORS = THEMES.dieAI;
+export const COLORS = THEMES.dietly;

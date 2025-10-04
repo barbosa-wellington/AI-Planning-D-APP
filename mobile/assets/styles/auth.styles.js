@@ -91,8 +91,8 @@ export const authStyles = StyleSheet.create({
     fontWeight: "600",
   },
   logo: {
-    width: 120,        // smaller than landing page
-    height: 120,
+    width: 220,        // smaller than landing page
+    height: 220,
     marginBottom: 20,
     alignSelf: "center",
   }
