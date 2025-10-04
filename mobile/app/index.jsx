@@ -1,62 +1,65 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity, Dimensions } from "react-native";
 import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function Landing() {
   const router = useRouter();
 
+  const { width, height }= Dimensions.get("window");
   return (
-    <View style={styles.container}>
-      {/* Logo */}
-      <Image
-        source={require("../assets/images/dietly-logo.png")}
-        style={styles.logo}
-        resizeMode="contain"
-      />
 
-      {/* App name */}
-      <Text style={styles.title}>Dietly</Text>
-      <Text style={styles.subtitle}>Your AI-powered diet planner</Text>
+    // personalizing the background to match with the logo
+    <LinearGradient
+    colors={["#a7f3d0", "#6ee7b7", "#60a5fa"]} // lighter green to light teal to sky blue
+  start={{ x: 0, y: 0 }}
+  end={{ x: 1, y: 1 }}
+  style={styles.container}
+  >
+    {/* Logo */}
+    <Image
+      source={require("../assets/images/dietly-logo-v2.png")}
+      style={{
+        width: width * 0.9,
+        height: height * 0.4,
+        marginBottom: 30,
+      }}
+      resizeMode="contain"
+    />
 
-      {/* Arrow button */}
-      <TouchableOpacity
-        style={styles.arrowButton}
-        onPress={() => router.push("/(auth)/sign-in")}
-        activeOpacity={0.8}
-      >
-        <Ionicons name="arrow-forward-circle" size={64} color="#22c55e" />
-      </TouchableOpacity>
-    </View>
+    {/* Subtitle */}
+    <Text style={styles.subtitle}>Your AI-powered diet planner</Text>
+
+    {/* Arrow Button */}
+    <TouchableOpacity
+      style={styles.arrowButton}
+      onPress={() => router.push("/(auth)/sign-in")}
+      activeOpacity={0.8}
+    >
+      <Ionicons name="arrow-forward-circle" size={64} color="#fff" />
+    </TouchableOpacity>
+  </LinearGradient>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     backgroundColor: "#FFFFFF",
+    alignItems: "center",
+    justifyContent: "center",
     padding: 20,
   },
-  logo: {
-    width: 180,
-    height: 180,
-    marginBottom: 24,
-  },
-  title: {
-    fontSize: 32,
-    fontWeight: "bold",
-    color: "#22c55e",
-    marginBottom: 4,
-  },
   subtitle: {
-    fontSize: 16,
-    color: "#3b82f6",
+    fontSize: 18,
+    fontWeight: "500",
+    color: "#374151", // gray-700
     textAlign: "center",
     marginBottom: 40,
   },
   arrowButton: {
-    marginTop: 40,
+    marginTop: 10,
   },
 });
