@@ -11,23 +11,22 @@ const user_profile = () => {
 
 
     return (
-        <View>
+        <View style={{flex:1, backgroundColor: "fff"}}>
       {/* Page Content */}
       <Text>User profile This is a test page.</Text>
       <Text> Test of logout</Text>
       
 
 
-
-      {/* Define the bottom for logoff */}
-            <TouchableOpacity
-            style={styles.logoutButton}
-            onPress={()=> signOut()}
-            
-            >
-              <Text style={styles.logoutText}> Log Out</Text>
-            </TouchableOpacity>
-
+                {/* Define the bottom for logoff */}
+                      <TouchableOpacity
+                      style={styles.logoutButton}
+                      onPress={()=> signOut()}
+                      
+                      >
+                        <Text style={styles.logoutText}> Log Out</Text>
+                      </TouchableOpacity>
+      
 
     </View>
   );
@@ -36,17 +35,24 @@ const user_profile = () => {
 
 const styles = StyleSheet.create({
   logoutButton: {
-    marginTop: 30,
-    marginHorizontal: 20,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    backgroundColor: "#EF4444", // red
-    borderRadius: 8,
-    alignItems: "center",
-  },
+  position: "absolute",
+  top: 40,
+  right: 20,
+  backgroundColor: "#10B981", // Dietly green
+  paddingVertical: 6,
+  paddingHorizontal: 14,
+  borderRadius: 8,
+  // test of aligment of button and text
+  // alignSelf: "flex-end",
+  shadowColor: "#000",
+  shadowOpacity: 0.2,
+  shadowOffset: { width: 0, height: 2 },
+  shadowRadius: 4,
+  elevation: 5,
+},
   logoutText: {
     color: "white",
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: "600",
   },
 });
