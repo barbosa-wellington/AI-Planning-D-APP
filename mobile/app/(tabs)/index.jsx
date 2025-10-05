@@ -4,8 +4,7 @@ import React from "react";
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 
-// Adding authentication verification for log-out
-import { useAuth } from "@clerk/clerk-expo";
+
 
 // // Add this function in your component
 // const handleChatPress = () => {
@@ -15,25 +14,24 @@ import { useAuth } from "@clerk/clerk-expo";
 //   console.log('AI Chat pressed');
 // };
 const HomeScreen = () => {
-// calling the function for logoff
-  const { signOut } = useAuth();
+
 
     return (
+
+      
+
         <View>
       {/* Page Content */}
       <Text >HomeScreen This is a test page.</Text>
       <Text> Starting working on the development of APIs</Text>
       <Text> Testing of log-off screen bottom</Text>
+
+
+      {/* <Text style={styles.greeting}>Hi, Wellington 👋</Text>
+      <Text style={styles.subtitle}>Here’s your wellness summary for today</Text> */}
       {/* <Text>HomeScreen This is a test page. Last test</Text> */}
 
-{/* Define the bottom for logoff */}
-      <TouchableOpacity
-      style={styles.logoutButton}
-      onPress={()=> signOut()}
-      
-      >
-        <Text style={styles.logoutText}> Log Out</Text>
-      </TouchableOpacity>
+
 
 
       {/* Floating AI Chat Button */}
@@ -74,21 +72,5 @@ const HomeScreen = () => {
 // });
 
 
-const styles = StyleSheet.create({
-  logoutButton: {
-    marginTop: 30,
-    marginHorizontal: 20,
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    backgroundColor: "#EF4444", // red
-    borderRadius: 8,
-    alignItems: "center",
-  },
-  logoutText: {
-    color: "white",
-    fontSize: 16,
-    fontWeight: "600",
-  },
-});
 
 export default HomeScreen;
