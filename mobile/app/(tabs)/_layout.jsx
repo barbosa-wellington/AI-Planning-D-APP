@@ -2,6 +2,8 @@ import { Redirect, Stack, Tabs } from "expo-router";
 import { useAuth } from "@clerk/clerk-expo";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../../constants/colors";
+import { Image } from "react-native";
+
 
 const TabsLayout = () => {
      const { isSignedIn } = useAuth();
@@ -43,8 +45,8 @@ const TabsLayout = () => {
             <Tabs.Screen
                 name="index"
                 options={{
-                    title:"Recipes",
-                    tabBarIcon: ({color, size}) => <Ionicons name="restaurant" size={size} color={color} 
+                    title:"home",
+                    tabBarIcon: ({color, size}) => <Ionicons name="home" size={size} color={color} 
                     />,
                 }}
             />
@@ -72,14 +74,28 @@ const TabsLayout = () => {
                     color={color} />
                 }}
             />
-            {/* <Tabs.Screen
+            <Tabs.Screen
                 name="ai_assistant"
                 options={{
                     title:"ai",
-                    tabBarIcon: ({color, size}) => <Ionicons name="settings_account_box" size={size}
-                    color={color} />
+                    tabBarIcon:({ focused, color, size }) => (
+                        <Image
+                                source={require("../../assets/images/ai-icon.png")} // 👈 your logo path
+                                style={{
+                                width: size,
+                                height: size,
+                                opacity: focused ? 1 : 0.6, // slightly dim when not selected
+                                // tintColor: color,
+          
+        }}
+        resizeMode="contain"
+      />
+
+                    )
+                    
+                    // "../../assets/images/ai-icon-v1.png"
                 }}
-            /> */}
+            />
         </Tabs>
         
     );
