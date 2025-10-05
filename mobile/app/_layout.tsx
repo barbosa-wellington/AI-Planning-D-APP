@@ -12,26 +12,17 @@ function RootNavigator() {
   if (!isLoaded) return null; // still loading Clerk
 
   // this code is working
-   // ✅ If user is not signed in AND tries to go inside tabs → send to landing
+   // If user is not signed in AND tries to go inside tabs → send to landing
   if (!isSignedIn && pathname.startsWith('/(tabs)')) {
     return <Redirect href="/" />;
   }
 
-  // ✅ If user is signed in but tries to go to auth → send to tabs
+  // If user is signed in but tries to go to auth → send to tabs
   if (isSignedIn && pathname.startsWith('/(auth)')) {
     return <Redirect href="/(tabs)" />;
   
   }
 
-  // // ✅ If signed out and inside tabs → send to landing
-  // if (!isSignedIn && pathname.startsWith('/(tabs)')) {
-  //   return <Redirect href="/" />;
-  // }
-
-  // // ✅ If signed in and at landing or auth → send to tabs
-  // if (isSignedIn && (pathname === '/' || pathname.startsWith('/(auth)'))) {
-  //   return <Redirect href="/(tabs)" />;
-  // }
 
   return <Slot />;
 }

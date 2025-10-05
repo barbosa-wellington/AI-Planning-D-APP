@@ -4,6 +4,10 @@ import { useRouter } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 
+
+
+// This is the homescreen file that shows the application Logo.
+
 export default function Landing() {
   const router = useRouter();
 

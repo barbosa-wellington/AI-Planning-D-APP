@@ -6,7 +6,7 @@ import { router } from 'expo-router';
 
 
 
-// // Add this function in your component
+// Add this function in your component
 // const handleChatPress = () => {
 //   // Navigate to chat screen (you'll create this later)
 //   router.push('/ai_assistant');
@@ -50,26 +50,26 @@ const HomeScreen = () => {
 
 
 // // Add these styles to your StyleSheet.create({})
-// const styles = StyleSheet.create({
-//   // ... your existing styles
+const styles = StyleSheet.create({
+  // ... your existing styles
   
-//   floatingButton: {
-//     position: 'absolute',
-//     bottom: 24,
-//     right: 24,
-//     width: 56,
-//     height: 56,
-//     borderRadius: 28,
-//     backgroundColor: '#3B82F6',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     shadowColor: '#3B82F6',
-//     shadowOffset: { width: 0, height: 4 },
-//     shadowOpacity: 0.3,
-//     shadowRadius: 8,
-//     elevation: 8,
-//   },
-// });
+  floatingButton: {
+    position: 'absolute',
+    bottom: 24,
+    right: 24,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
+    backgroundColor: '#3B82F6',
+    justifyContent: 'center',
+    alignItems: 'center',
+    shadowColor: '#3B82F6',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+});
 
 
 

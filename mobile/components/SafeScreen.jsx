@@ -7,7 +7,11 @@ const SafeScreen = ({children}) => {
     const insets = useSafeAreaInsets()
 
     return (
-        <View style={{paddingTop:insets.top, flex:1, backgroundColor:COLORS.background}}>
+        <View style={{flex: 1,
+        paddingTop: insets.top,
+        // adding the insets to autoadjust the tab depend on the device.
+        paddingBottom: insets.bottom, 
+        backgroundColor: COLORS.background,}}>
             {children}
         </View>
     );
