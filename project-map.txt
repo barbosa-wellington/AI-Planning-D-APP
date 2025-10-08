@@ -1,6 +1,6 @@
 🚀 PROJECT: AI-Planning-D-APP
 📍 PATH: C:\Users\user\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 29/09/2025, 8:44:30 pm
+📅 GENERATED: 08/10/2025, 7:26:25 pm
 
 📁 PROJECT STRUCTURE:
 ==================================================
@@ -16,6 +16,7 @@
 │       │   ├── 📄 db.js (334B)
 │       │   └── 📄 env.js (214B)
 │       ├── 📁 db/
+│       │   ├── 📄 data-pipeline.py (80B)
 │       │   ├── 📁 migrations/
 │       │   │   ├── 📄 0000_remarkable_sunset_bain.sql (236B)
 │       │   │   └── 📁 meta/
@@ -26,40 +27,39 @@
 ├── 📁 mobile/
 │   ├── 📁 .cursor/
 │   │   └── 📄 mcp.json (196B)
-│   ├── 📄 .gitignore (453B)
+│   ├── 📄 .gitignore (502B)
 │   ├── 📁 app/
 │   │   ├── 📁 (auth)/
-│   │   │   ├── 📄 sign-in.jsx (6.1KB)
+│   │   │   ├── 📄 sign-in.jsx (6.2KB)
 │   │   │   ├── 📄 sign-up.jsx (6.4KB)
 │   │   │   ├── 📄 verify-email.jsx (4.8KB)
-│   │   │   └── 📄 _layout.tsx (429B)
+│   │   │   └── 📄 _layout.tsx (442B)
 │   │   ├── 📁 (tabs)/
-│   │   │   ├── 📄 ai_assistant.jsx (308B)
+│   │   │   ├── 📄 ai_assistant.jsx (8.2KB)
+│   │   │   ├── 📄 daily_meal.jsx (271B)
 │   │   │   ├── 📄 favorites.jsx (274B)
 │   │   │   ├── 📄 food_search.jsx (280B)
-│   │   │   ├── 📄 index.jsx (1.7KB)
-│   │   │   ├── 📄 user_profile.jsx (283B)
-│   │   │   └── 📄 _layout.jsx (2.9KB)
-│   │   └── 📄 _layout.tsx (743B)
+│   │   │   ├── 📄 index.jsx (1.9KB)
+│   │   │   ├── 📄 user_profile.jsx (1.4KB)
+│   │   │   ├── 📄 wellington.jsx (276B)
+│   │   │   └── 📄 _layout.jsx (3.5KB)
+│   │   ├── 📄 index.jsx (1.7KB)
+│   │   └── 📄 _layout.tsx (1.3KB)
 │   ├── 📄 app.json (1.2KB)
 │   ├── 📁 assets/
 │   │   ├── 📁 images/
+│   │   │   ├── 📄 ai-icon-v1.png (4.0KB)
 │   │   │   ├── 📄 ai-icon.png (5.3KB)
 │   │   │   ├── 📄 ai-icon1.png (1.6KB)
 │   │   │   ├── 📄 android-icon-background.png (17.1KB)
 │   │   │   ├── 📄 android-icon-foreground.png (76.9KB)
 │   │   │   ├── 📄 android-icon-monochrome.png (4.0KB)
-│   │   │   ├── 📄 chicken.png (1500.6KB)
-│   │   │   ├── 📄 dinner_8730485.png (41.2KB)
+│   │   │   ├── 📄 ChatGPT Image Oct 4, 2025, 11_25_21 AM.png (1383.3KB)
+│   │   │   ├── 📄 dietly-logo-v2.png (302.2KB)
+│   │   │   ├── 📄 dietly-logo.png (1193.7KB)
 │   │   │   ├── 📄 favicon.png (1.1KB)
-│   │   │   ├── 📄 fish-chips_6108623.png (54.9KB)
-│   │   │   ├── 📄 i1.png (868.8KB)
-│   │   │   ├── 📄 i2.png (954.2KB)
-│   │   │   ├── 📄 i3.png (912.2KB)
 │   │   │   ├── 📄 icon.png (384.3KB)
-│   │   │   ├── 📄 lamb.png (1474.9KB)
 │   │   │   ├── 📄 partial-react-logo.png (5.0KB)
-│   │   │   ├── 📄 pork.png (1436.8KB)
 │   │   │   ├── 📄 react-logo.png (6.2KB)
 │   │   │   ├── 📄 react-logo@2x.png (13.9KB)
 │   │   │   ├── 📄 react-logo@3x.png (20.8KB)
@@ -69,23 +69,24 @@
 │   │   │   ├── 📄 salad_7694022.png (43.3KB)
 │   │   │   └── 📄 splash-icon.png (17.1KB)
 │   │   └── 📁 styles/
-│   │       ├── 📄 auth.styles.js (1.8KB)
+│   │       ├── 📄 auth.styles.js (1.9KB)
 │   │       ├── 📄 favorites.styles.js (2.5KB)
 │   │       ├── 📄 home.styles.js (5.2KB)
 │   │       ├── 📄 recipe-details.styles.js (7.3KB)
 │   │       └── 📄 search.styles.js (2.6KB)
 │   ├── 📁 components/
-│   │   └── 📄 SafeScreen.jsx (458B)
+│   │   └── 📄 SafeScreen.jsx (594B)
 │   ├── 📁 constants/
-│   │   └── 📄 colors.js (2.7KB)
+│   │   └── 📄 colors.js (3.0KB)
 │   ├── 📄 eslint.config.js (237B)
 │   ├── 📄 expo-env.d.ts (110B)
-│   ├── 📄 package-lock.json (523.8KB)
-│   ├── 📄 package.json (1.4KB)
+│   ├── 📄 package-lock.json (538.9KB)
+│   ├── 📄 package.json (1.5KB)
 │   ├── 📄 README.md (1.7KB)
 │   ├── 📁 services/
-│   │   └── 📄 mealAPI.js (0B)
+│   │   └── 📄 mealAPI.js (728B)
 │   └── 📄 tsconfig.json (242B)
+├── 📄 project-map.txt (10.3KB)
 ├── 📄 project-mapper.js (5.5KB)
 └── 📄 README.md (483B)
 
