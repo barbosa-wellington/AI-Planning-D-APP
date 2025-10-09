@@ -8,7 +8,7 @@ const food_search = () => {
     return (
         <View>
       {/* Page Content */}
-      <Text>Food_search This is a test page.</Text>
+      <Text>DietPlan catalogue This is a test page.</Text>
       
 
     </View>
