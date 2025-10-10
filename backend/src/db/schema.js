@@ -11,3 +11,11 @@ export const favoritesTable = pgTable("favorites", {
     servings:text("servings"),
     createdAt: timestamp("created_at").defaultNow(),
 });
+
+// Create user table
+
+
+// Create dietpreferences
+
+
+// Protein choice
