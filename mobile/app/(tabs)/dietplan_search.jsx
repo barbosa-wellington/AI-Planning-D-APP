@@ -2,7 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 
 
-const food_search = () => {
+const dietplan_search = () => {
 
 
     return (
@@ -14,4 +14,4 @@ const food_search = () => {
     </View>
   );
 };
-export default food_search;
+export default dietplan_search;
