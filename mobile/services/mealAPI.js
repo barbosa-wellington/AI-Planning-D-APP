@@ -1,6 +1,8 @@
 //  Link API for food database
 
 // API-1 = https://fdc.nal.usda.gov/api-guide
+// Documentation
+// https://fdc.nal.usda.gov/api-guide
 
 
 // API-2 = https://openfoodfacts.github.io/openfoodfacts-server/api/
@@ -16,3 +18,6 @@
 // Link API for Biometric data consumption.
 
 //  API-1 = https://myfitnesspalapi.com/docs/access-tokens/
+
+// DATASET Download
+// https://www.kaggle.com/datasets?search=food
