@@ -19,3 +19,8 @@ export const favoritesTable = pgTable("favorites", {
 
 
 // Protein choice
+
+
+// FoodItem
+
+// AIPlan
