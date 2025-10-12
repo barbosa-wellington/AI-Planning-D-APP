@@ -51,21 +51,14 @@ const TabsLayout = () => {
                 }}
             />
             <Tabs.Screen
-                name="food_search"
+                name="dietplan_search"
                 options={{
                     title:"food",
                     tabBarIcon: ({color, size}) => <Ionicons name="search" size={size}
                     color={color} />
                 }}
             />
-            <Tabs.Screen
-                name="favorites"
-                options={{
-                    title:"favorites",
-                    tabBarIcon: ({color, size}) => <Ionicons name="heart" size={size}
-                    color={color} />
-                }}
-            />
+            
             <Tabs.Screen
                 name="user_profile"
                 options={{
@@ -80,7 +73,7 @@ const TabsLayout = () => {
                     title:"ai",
                     tabBarIcon:({ focused, color, size }) => (
                         <Image
-                                source={require("../../assets/images/ai-icon.png")} // 👈 your logo path
+                                source={require("../../assets/images/ai-icon.png")} 
                                 style={{
                                 width: size,
                                 height: size,

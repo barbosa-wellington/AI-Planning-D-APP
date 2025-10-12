@@ -1,6 +1,6 @@
 🚀 PROJECT: AI-Planning-D-APP
 📍 PATH: C:\Users\user\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 08/10/2025, 7:26:25 pm
+📅 GENERATED: 12/10/2025, 5:07:55 pm
 
 📁 PROJECT STRUCTURE:
 ==================================================
@@ -22,7 +22,7 @@
 │       │   │   └── 📁 meta/
 │       │   │       ├── 📄 0000_snapshot.json (1.8KB)
 │       │   │       └── 📄 _journal.json (216B)
-│       │   └── 📄 schema.js (511B)
+│       │   └── 📄 schema.js (619B)
 │       └── 📄 server.js (2.8KB)
 ├── 📁 mobile/
 │   ├── 📁 .cursor/
@@ -35,15 +35,18 @@
 │   │   │   ├── 📄 verify-email.jsx (4.8KB)
 │   │   │   └── 📄 _layout.tsx (442B)
 │   │   ├── 📁 (tabs)/
-│   │   │   ├── 📄 ai_assistant.jsx (8.2KB)
-│   │   │   ├── 📄 daily_meal.jsx (271B)
-│   │   │   ├── 📄 favorites.jsx (274B)
-│   │   │   ├── 📄 food_search.jsx (280B)
+│   │   │   ├── 📄 ai_assistant.jsx (7.5KB)
+│   │   │   ├── 📄 dietplan_search.jsx (299B)
 │   │   │   ├── 📄 index.jsx (1.9KB)
 │   │   │   ├── 📄 user_profile.jsx (1.4KB)
-│   │   │   ├── 📄 wellington.jsx (276B)
-│   │   │   └── 📄 _layout.jsx (3.5KB)
+│   │   │   └── 📄 _layout.jsx (3.2KB)
 │   │   ├── 📄 index.jsx (1.7KB)
+│   │   ├── 📁 screens/
+│   │   │   ├── 📄 daily_meal.jsx (271B)
+│   │   │   └── 📄 favorites.jsx (274B)
+│   │   ├── 📁 testing/
+│   │   │   ├── 📄 Shalini.jsx (268B)
+│   │   │   └── 📄 wellington.jsx (276B)
 │   │   └── 📄 _layout.tsx (1.3KB)
 │   ├── 📄 app.json (1.2KB)
 │   ├── 📁 assets/
@@ -86,7 +89,6 @@
 │   ├── 📁 services/
 │   │   └── 📄 mealAPI.js (728B)
 │   └── 📄 tsconfig.json (242B)
-├── 📄 project-map.txt (10.3KB)
 ├── 📄 project-mapper.js (5.5KB)
 └── 📄 README.md (483B)
 
