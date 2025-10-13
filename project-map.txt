@@ -1,10 +1,23 @@
 🚀 PROJECT: AI-Planning-D-APP
 📍 PATH: C:\Users\user\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 12/10/2025, 5:07:55 pm
+📅 GENERATED: 13/10/2025, 11:20:08 am
 
 📁 PROJECT STRUCTURE:
 ==================================================
 ├── 📄 .gitattributes (66B)
+├── 📁 ai_pipeline/
+│   ├── 📁 datasets/
+│   │   ├── 📄 FOOD-DATA-GROUP1.csv (95.5KB)
+│   │   ├── 📄 FOOD-DATA-GROUP2.csv (50.8KB)
+│   │   ├── 📄 FOOD-DATA-GROUP3.csv (96.1KB)
+│   │   ├── 📄 FOOD-DATA-GROUP4.csv (38.0KB)
+│   │   └── 📄 FOOD-DATA-GROUP5.csv (119.0KB)
+│   ├── 📁 notebooks/
+│   ├── 📄 requirements.txt (121B)
+│   └── 📁 src/
+│       ├── 📁 data_processing/
+│       │   └── 📄 data-pipeline.py (80B)
+│       └── 📁 models/
 ├── 📁 backend/
 │   ├── 📄 .gitignore (20B)
 │   ├── 📄 drizzle.config.js (351B)
@@ -16,7 +29,6 @@
 │       │   ├── 📄 db.js (334B)
 │       │   └── 📄 env.js (214B)
 │       ├── 📁 db/
-│       │   ├── 📄 data-pipeline.py (80B)
 │       │   ├── 📁 migrations/
 │       │   │   ├── 📄 0000_remarkable_sunset_bain.sql (236B)
 │       │   │   └── 📁 meta/
