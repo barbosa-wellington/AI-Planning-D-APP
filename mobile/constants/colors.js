@@ -122,6 +122,15 @@ const dietlyTheme = {
   white: "#FFFFFF",
 };
 
+export const Colors = {
+  primary: "#16a34a",
+  secondary: "#22c55e",
+  accent: "#0ea5e9",
+  background: "#f9fafb",
+  textDark: "#111827",
+  textLight: "#6b7280",
+};
+
 export const THEMES = {
   coffee: coffeeTheme,
   forest: forestTheme,
@@ -133,6 +142,7 @@ export const THEMES = {
   roseGold: roseGoldTheme,
   dieAI: dietAIOceanTheme,
   dietly: dietlyTheme,
+  color: Colors,
 };
 
 // 👇 change this to switch theme
