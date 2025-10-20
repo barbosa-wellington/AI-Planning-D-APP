@@ -18,3 +18,6 @@ async function main() {
 }
 
 main().catch(console.error);
+
+
+// checking more option using typescripts endpoint
