@@ -4,10 +4,10 @@ import requests
 
 # import ollama
 
-url  = "http://localhost:11434/api/chat"
+url  = "http://localhost:11434/"
 
 payload = {
-    "model": "moondream",
+    "model": "Mistral:latest",
     "messages":[{"role": "user", "content":"what is Python?"}]
 }
 

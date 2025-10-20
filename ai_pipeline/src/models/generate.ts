@@ -10,7 +10,7 @@ async function main() {
 
     //Regular response
     const response = await ollama.generate({
-        model : "Mistral",
+        model : "Mistral:latest",
         // Prompt determine which response the model will provide.
         prompt:"Why is the sky blue?"
     });
