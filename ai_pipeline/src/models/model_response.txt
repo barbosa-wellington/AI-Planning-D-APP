@@ -1,0 +1,26 @@
+Streaming respone from Ollama:
+{
+"sky_colors_by_time": {
+    "Morning (Sunrise):":{
+        "colors": ["Pink", "Orange", "Red", "Yellow", "Pale Blue"],
+        "explanation": "At sunrise, sunlight has to travel through more of the atmosphere. This scatters the blue light, leaving the longer wavelengths – reds, oranges, and yellows – to dominate the sky. The varying colors depend on the amount of dust and particles in the air, which can scatter light in different ways."
+    },
+    "Mid-Day (Noon):":{
+        "colors": ["Bright Blue"],
+        "explanation": "During midday, the sun is directly overhead, and sunlight passes through the least amount of atmosphere. This allows almost all of the blue light to scatter in all directions, creating the vibrant blue we see."
+    },
+    "Afternoon (Late Afternoon):":{
+        "colors": ["Pale Blue", "Pink", "Orange"],
+        "explanation": "As the sun begins to lower in the horizon, sunlight has to travel through even more of the atmosphere. This increased scattering scatters away the blue light first, leaving behind the warmer colors like orange, red, and pink."
+    },
+    "Evening (Sunset):":{
+        "colors": ["Deep Red", "Dark Red", "Purple", "Dark Blue"],
+        "explanation": "At sunset, the sun is very low on the horizon. The light has to pass through the most atmosphere, so almost all of the blue light has already been scattered. The remaining light consists of longer wavelengths - reds, oranges, and purples – creating stunning and deep color displays. The specific shades depend on atmospheric conditions like clouds and pollution."
+    },
+    "Night:":{
+        "colors": ["Dark Blue", "Black", "Dark Gray"],
+        "explanation": "At night, there’s no direct sunlight to scatter. The sky appears dark blue due to the scattering of starlight and faint light from distant stars.  The darker shades of gray or black come from the absence of direct light."
+    }
+}
+}
+testing code using Ollama model

@@ -12,7 +12,7 @@ async function main() {
     const response = await ollama.generate({
         model : "Gemma3:4b",
         // Prompt determine which response the model will provide.
-        prompt:"Can you say hi to me?"
+        prompt:"Are you Llama2 or what?"
     });
     console.log(response.response);
 }

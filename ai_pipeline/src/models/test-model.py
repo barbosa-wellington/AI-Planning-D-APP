@@ -5,10 +5,13 @@ import requests
 # import ollama
 
 url  = "http://localhost:11434/api/chat"
+# url = "http://localhost:11434/api/generate"
 
 payload = {
     "model": "Gemma3:4b",
-    "messages":[{"role": "user", "content":"can you say hi in 5 language? "}]
+    "messages":[{"role": "user", "content":"what color is the sky at different times of the day? "}],
+    "format": "json",
+    "strem": "false"
 }
 
 response = requests.post(url, json=payload, stream=True)
