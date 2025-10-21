@@ -9,7 +9,7 @@ Skills Showcased: Python, TensorFlow/Keras, JavaScript, PostGress, React, Model 
 
 
 
-# Technilogies
+# Technologies Stack
 
 The project is created with:
 *  Python: 3.9
@@ -18,6 +18,3 @@ The project is created with:
 *  Pandas:
 *  Scikit-learn:
 *  Numpy
-*  Node.js: 22.19.0
-*  Npm: 10.9.3
-*  Expo: 54.0.13

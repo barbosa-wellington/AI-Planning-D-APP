@@ -2,7 +2,7 @@ import { Ollama} from "ollama";
 
 
 //  Create a function using a local ollama with model Mistral
-// This model requires a machine with minimum of 16GB RAM.
+// This model Gemma3 requires a machine with minimum of 8GB RAM.
 // to run the typescript type npx tsx generate.ts
 
 async function main() {
@@ -10,11 +10,14 @@ async function main() {
 
     //Regular response
     const response = await ollama.generate({
-        model : "Mistral",
+        model : "Gemma3:4b",
         // Prompt determine which response the model will provide.
-        prompt:"Why is the sky blue?"
+        prompt:"Can you say hi to me?"
     });
     console.log(response.response);
 }
 
 main().catch(console.error);
+
+
+// checking more option using typescripts endpoint
