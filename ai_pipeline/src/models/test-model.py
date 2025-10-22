@@ -35,3 +35,14 @@ else:
 
 
 print("testing code using Ollama model")
+
+
+# This project utilize Anaconda Python and the envrionment activate
+# conda activate ai-planning-D-App
+# ==> WARNING: A newer version of conda exists. <==
+#     current version: 25.5.1
+#     latest version: 25.9.1
+
+# Please update conda by running
+
+#     $ conda update -n base -c defaults conda
