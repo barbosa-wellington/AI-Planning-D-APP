@@ -46,3 +46,6 @@ print("testing code using Ollama model")
 # Please update conda by running
 
 #     $ conda update -n base -c defaults conda
+
+
+
