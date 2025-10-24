@@ -1,0 +1,61 @@
+
+
+agent_Ollama = {
+    "model": "Gemma3:4b",
+    "messages":[{"role": "user", "content":"what is today wheter in melbourne? "}],
+    "messages":[{"role": "user", "content":"can you generate a simple diet plan (breakfast)? "}],
+    "format": "json",
+    "strem": "false"
+}
+
+
+{
+"diet_plan": {
+"meal": "Breakfast",
+"days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+"options": [
+    {
+      "day": "Monday",
+      "meal": "Oatmeal with Berries and Nuts",
+      "description": "1/2 cup rolled oats cooked with water or milk, 1/2 cup mixed berries (fresh or frozen), 1 tablespoon chopped nuts (almonds, walnuts)",
+      "calories": 250
+    },
+    {
+      "day": "Tuesday",
+      "meal": "Greek Yogurt with Granola and Fruit",
+      "description": "1 cup plain Greek yogurt, 1/4 cup granola, 1/2 cup sliced banana or other fruit",
+      "calories": 280
+    },
+    {
+      "day": "Wednesday",
+      "meal": "Whole Wheat Toast with Avocado and Egg",
+      "description": "2 slices whole wheat toast, 1/4 avocado mashed on toast, 1 boiled or scrambled egg",
+      "calories": 300
+    },
+    {
+      "day": "Thursday",
+      "meal": "Smoothie",
+      "description": "1 cup spinach, 1/2 frozen banana, 1/2 cup berries, 1 scoop protein powder, 1/2 cup almond milk",
+      "calories": 270
+    },
+    {
+      "day": "Friday",
+      "meal": "Breakfast Burrito (Whole Wheat Tortilla)",
+      "description": "1 whole wheat tortilla, 1 scrambled egg, 1/4 cup black beans, 1 tablespoon salsa",
+      "calories": 310
+    },
+    {
+      "day": "Saturday",
+      "meal": "Pancakes (Whole Wheat)",
+      "description": "2 small whole wheat pancakes, 1/2 cup mixed berries, a drizzle of maple syrup (1 tbsp)",
+      "calories": 330
+    },
+    {
+      "day": "Sunday",
+      "meal": "Breakfast Hash (Sweet Potatoes & Eggs)",
+      "description": "1/2 cup diced sweet potatoes, 1 boiled or scrambled egg, dash of spices (turmeric, paprika)",
+      "calories": 280
+    }
+]
+}
+}
