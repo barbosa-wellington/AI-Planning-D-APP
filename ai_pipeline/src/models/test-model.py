@@ -9,7 +9,7 @@ url  = "http://localhost:11434/api/chat"
 
 payload = {
     "model": "Gemma3:4b",
-    "messages":[{"role": "user", "content":"can you generate a simple diet plan (breakfast)? "}],
+    "messages":[{"role": "user", "content":"what is the weahter in melbourne now? "}],
     "format": "json",
     "strem": "false"
 }
