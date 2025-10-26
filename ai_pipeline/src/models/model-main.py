@@ -28,6 +28,7 @@ def handle_conversation():
         result = chain.invoke({"context": context, "question": user_input})
         print("AI Assistant: ", result)
         context += f"\n User: {user_input}\n AI: {result}"
+        
 # result = model.invoke(input="hello world")
 # result = chain.invoke({"context": "", "question": "hey how are you?"})
 # print(result)
