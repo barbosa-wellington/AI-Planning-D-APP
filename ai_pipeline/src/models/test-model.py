@@ -47,5 +47,7 @@ print("testing code using Ollama model")
 
 #     $ conda update -n base -c defaults conda
 
+# Export environment
+# conda env export > environment.yml
 
 
