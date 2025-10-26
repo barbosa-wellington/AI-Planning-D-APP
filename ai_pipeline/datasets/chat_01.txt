@@ -1,0 +1,28 @@
+(ai-planning-D-App) C:\Users\user\Documents\GitHub\AI-Planning-D-APP\ai_pipeline\src\models>python model-main.py
+Hello there! 👋
+
+Here is the AI Assistant, type 'exti' to quit.
+User: what is the wheater in melbourne now?
+AI Assistant:  The weather in Melbourne is currently 18°C and partly cloudy.
+User: What about in Sydney?
+AI Assistant:  The weather in Sydney is currently 22°C and sunny.
+User: lastly what about in Brazil sao paulo?
+Here is the AI Assistant, type 'exti' to quit.
+User: what is the wheater in melbourne now?
+AI Assistant:  The weather in Melbourne is currently 18°C and partly cloudy.
+User: What about in Sydney?
+AI Assistant:  The weather in Sydney is currently 22°C and sunny.
+User: lastly what about in Brazil sao paulo?
+User: what is the wheater in melbourne now?
+AI Assistant:  The weather in Melbourne is currently 18°C and partly cloudy.
+User: What about in Sydney?
+AI Assistant:  The weather in Sydney is currently 22°C and sunny.
+User: lastly what about in Brazil sao paulo?
+AI Assistant:  The weather in Sydney is currently 22°C and sunny.
+User: lastly what about in Brazil sao paulo?
+AI Assistant:  The weather in São Paulo, Brazil is currently 27°C and clear.
+User: what about in Thailand Phuket?
+AI Assistant:  The weather in Phuket, Thailand is currently 31°C and sunny.
+User: quit
+AI Assistant:  Okay, goodbye! Have a great day.
+User: exit
