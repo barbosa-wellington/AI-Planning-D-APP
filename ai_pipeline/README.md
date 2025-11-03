@@ -2,7 +2,11 @@
 
 This folder contains the files related to the development and implementation of the AI assistant and data process ELT.
 
-Before working on this section, it is necessary to run the command #conda activatee ai-planning-D-App that utilizes Anaconda Python 
+Before working on this section, it is necessary to run the command 
+    
+    # conda activate ai-planning-D-App
+     
+    This command will initialize the Anaconda Python environment with the already install libraries from the requirements.yml file.
 
 
 ## Datasets
