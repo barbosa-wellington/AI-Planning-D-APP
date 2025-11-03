@@ -1,28 +1,46 @@
 🚀 PROJECT: AI-Planning-D-APP
 📍 PATH: C:\Users\user\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 13/10/2025, 11:20:08 am
+📅 GENERATED: 03/11/2025, 9:00:37 pm
 
 📁 PROJECT STRUCTURE:
 ==================================================
 ├── 📄 .gitattributes (66B)
 ├── 📁 ai_pipeline/
 │   ├── 📁 datasets/
+│   │   ├── 📄 chat_01.txt (1.4KB)
+│   │   ├── 📄 chat_02.txt (488B)
 │   │   ├── 📄 FOOD-DATA-GROUP1.csv (95.5KB)
 │   │   ├── 📄 FOOD-DATA-GROUP2.csv (50.8KB)
 │   │   ├── 📄 FOOD-DATA-GROUP3.csv (96.1KB)
 │   │   ├── 📄 FOOD-DATA-GROUP4.csv (38.0KB)
-│   │   └── 📄 FOOD-DATA-GROUP5.csv (119.0KB)
+│   │   ├── 📄 FOOD-DATA-GROUP5.csv (119.0KB)
+│   │   ├── 📄 history_chat.txt (547B)
+│   │   ├── 📄 model_response.txt (2.0KB)
+│   │   └── 📄 recipe-gen.json (1.7KB)
+│   ├── 📄 environment.yml (2.2KB)
 │   ├── 📁 notebooks/
+│   │   ├── 📁 .ipynb_checkpoints/
+│   │   │   └── 📄 EDA-Data-checkpoint.ipynb (96.3KB)
+│   │   └── 📄 EDA-Data.ipynb (96.6KB)
+│   ├── 📄 README.md (814B)
 │   ├── 📄 requirements.txt (121B)
+│   ├── 📄 requirements.yml (2.7KB)
 │   └── 📁 src/
 │       ├── 📁 data_processing/
 │       │   └── 📄 data-pipeline.py (80B)
 │       └── 📁 models/
+│           ├── 📄 generate.ts (625B)
+│           ├── 📄 main.py (269B)
+│           ├── 📄 model-main.py (1.0KB)
+│           ├── 📄 package-lock.json (831B)
+│           ├── 📄 package.json (56B)
+│           ├── 📄 test-model.py (1.4KB)
 ├── 📁 backend/
 │   ├── 📄 .gitignore (20B)
 │   ├── 📄 drizzle.config.js (351B)
 │   ├── 📄 package-lock.json (81.4KB)
 │   ├── 📄 package.json (526B)
+│   ├── 📄 README.md (154B)
 │   └── 📁 src/
 │       ├── 📁 config/
 │       │   ├── 📄 cron.js (542B)
@@ -47,9 +65,9 @@
 │   │   │   ├── 📄 verify-email.jsx (4.8KB)
 │   │   │   └── 📄 _layout.tsx (442B)
 │   │   ├── 📁 (tabs)/
-│   │   │   ├── 📄 ai_assistant.jsx (7.5KB)
+│   │   │   ├── 📄 ai_assistant.jsx (8.2KB)
 │   │   │   ├── 📄 dietplan_search.jsx (299B)
-│   │   │   ├── 📄 index.jsx (1.9KB)
+│   │   │   ├── 📄 home_screen.jsx (1.9KB)
 │   │   │   ├── 📄 user_profile.jsx (1.4KB)
 │   │   │   └── 📄 _layout.jsx (3.2KB)
 │   │   ├── 📄 index.jsx (1.7KB)
@@ -57,7 +75,9 @@
 │   │   │   ├── 📄 daily_meal.jsx (271B)
 │   │   │   └── 📄 favorites.jsx (274B)
 │   │   ├── 📁 testing/
+│   │   │   ├── 📄 arvy.jsx (264B)
 │   │   │   ├── 📄 Shalini.jsx (268B)
+│   │   │   ├── 📄 shameem.jsx (269B)
 │   │   │   └── 📄 wellington.jsx (276B)
 │   │   └── 📄 _layout.tsx (1.3KB)
 │   ├── 📄 app.json (1.2KB)
@@ -92,17 +112,18 @@
 │   ├── 📁 components/
 │   │   └── 📄 SafeScreen.jsx (594B)
 │   ├── 📁 constants/
-│   │   └── 📄 colors.js (3.0KB)
+│   │   └── 📄 colors.js (3.2KB)
 │   ├── 📄 eslint.config.js (237B)
 │   ├── 📄 expo-env.d.ts (110B)
-│   ├── 📄 package-lock.json (538.9KB)
+│   ├── 📄 package-lock.json (547.7KB)
 │   ├── 📄 package.json (1.5KB)
 │   ├── 📄 README.md (1.7KB)
 │   ├── 📁 services/
 │   │   └── 📄 mealAPI.js (728B)
 │   └── 📄 tsconfig.json (242B)
+├── 📄 project-map.txt (11.1KB)
 ├── 📄 project-mapper.js (5.5KB)
-└── 📄 README.md (483B)
+└── 📄 README.md (704B)
 
 📋 IMPORTANT FILE CONTENTS:
 ==================================================
@@ -324,6 +345,21 @@ This project was developed as part of the Work Integrated Learning at university
 
 Skills Showcased: Python, TensorFlow/Keras, JavaScript, PostGress, React, Model Training, Software Architecture, Technical Documentation
 
+
+
+# Technologies Stack
+
+The project is created with:
+*  Python: 3.9
+*  TypeScript
+*  Javascript
+*  Pandas:
+*  Scikit-learn:
+*  Numpy
+*  Nodejs: 22.19.0
+*  Npm: 10.9.3
+*  npx expo: 54.0.13
+*  Ollama: 0.12.0
 
 ==================================================
 
