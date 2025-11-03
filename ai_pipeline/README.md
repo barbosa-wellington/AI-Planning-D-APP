@@ -34,3 +34,5 @@ This folder contains the script to sinchnronize the datasets for the model LLM.
 ## Models
 
 This folder contains the script to run and configurate the LLM seletect (Ollama).
+
+
