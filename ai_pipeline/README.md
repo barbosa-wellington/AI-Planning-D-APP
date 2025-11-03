@@ -5,13 +5,23 @@ This folder contains the files related to the development and implementation of 
 Before working on this section, it is necessary to run the command 
     
     # conda activate ai-planning-D-App
-     
+
     This command will initialize the Anaconda Python environment with the already install libraries from the requirements.yml file.
 
 
 ## Datasets
 
 This folder contains the dataset for basic LLM feed-forawrd data.
+
+
+## API
+
+This folder contains the endpoit for the access of the model.
+
+    # uvicorn main:app --reload
+
+    The command uvicorn run the file using the library and initiate a server.
+
 
 ## Notebooks
 
