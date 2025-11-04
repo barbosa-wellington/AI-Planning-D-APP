@@ -13,7 +13,7 @@ class PetList(BaseModel):
 
 
 
-# Testing using recipe mindset
+# Testing adapting the example into the project perspective
 class Receipe(BaseModel):
     name: str
     ingridients: list
@@ -44,3 +44,4 @@ respose = chat(
 # print(pets)
 recipes = RecipeList.model_validate_json(respose.message.content)
 print(recipes)
+print(type(recipes))
