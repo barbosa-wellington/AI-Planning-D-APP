@@ -16,7 +16,8 @@ This folder contains the dataset for basic LLM feed-forawrd data.
 
 ## API
 
-This folder contains the endpoit for the access of the model.
+This folder contains the endpoint for the access of the model. Using curl or postman to test the api
+http://localhost:8000/generate?prompt="add your prompt here"
 
     # uvicorn main:app --reload
 
