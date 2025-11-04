@@ -19,7 +19,8 @@ function RootNavigator() {
 
   // If user is signed in but tries to go to auth → send to tabs
   if (isSignedIn && pathname.startsWith('/(auth)')) {
-    return <Redirect href="/(tabs)" />;
+    // return <Redirect href="/(tabs)" />;
+    return <Redirect href="/home_screen" />;
   
   }
 

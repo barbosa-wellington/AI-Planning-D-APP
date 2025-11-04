@@ -43,7 +43,7 @@ const TabsLayout = () => {
             },
         }}>
             <Tabs.Screen
-                name="index"
+                name="home_screen"
                 options={{
                     title:"home",
                     tabBarIcon: ({color, size}) => <Ionicons name="home" size={size} color={color} 

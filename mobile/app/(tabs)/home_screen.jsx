@@ -13,7 +13,7 @@ import { router } from 'expo-router';
 //   // Or for now, just log
 //   console.log('AI Chat pressed');
 // };
-const HomeScreen = () => {
+const home_screen = () => {
 
 
     return (
@@ -73,4 +73,4 @@ const styles = StyleSheet.create({
 
 
 
-export default HomeScreen;
+export default home_screen;

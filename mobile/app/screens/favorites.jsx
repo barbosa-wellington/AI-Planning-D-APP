@@ -9,6 +9,7 @@ const favorites = () => {
         <View>
       {/* Page Content */}
       <Text>favorites This is a test page.</Text>
+      <Text>favorites This is a test page.</Text>
       
 
     </View>

@@ -38,7 +38,7 @@ export default function Landing() {
     {/* Arrow Button */}
     <TouchableOpacity
       style={styles.arrowButton}
-      onPress={() => router.push("/(auth)/sign-in")}
+      onPress={() => router.push("/sign-in")}
       activeOpacity={0.8}
     >
       <Ionicons name="arrow-forward-circle" size={64} color="#fff" />
