@@ -2,13 +2,15 @@
 
 This folder contains the files related to the development and implementation of the AI assistant and data process ELT.
 
-Before working on this section, it is necessary to run the command 
+Before working on this section, ensure that you are installed Anaconda Python and run the following command. 
     
     # conda activate ai-planning-D-App
 
-    This command will initialize the Anaconda Python environment with the already install libraries from the requirements.yml file.
+    This command will initialize the Anaconda Python environment. Next whithin the environment import the required libraries for this project by running the code above.
 
+    # pip install -r requirements.yml
 
+    Now, you are go to process to use any feature on this application.
 ## Datasets
 
 This folder contains the dataset for basic LLM feed-forawrd data.
