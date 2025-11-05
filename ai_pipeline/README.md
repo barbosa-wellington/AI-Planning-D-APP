@@ -33,11 +33,11 @@ This folder contains the endpoints for the access of the model. You can test the
 
 ## Notebooks
 
-This folder contains the jupterNotebookd that allows the process of ELT and data preparation for feed the model.
+This folder contains the jupterNotebooks that allows the process of ELT and data preparation for feed the AI model.
 
-## Data Processing
+    Before using the following command, ensure that you have installed Anaconda Python.
 
-This folder contains the script to sinchnronize the datasets for the model LLM.
+    # jupyter notebook
 
 ## Models
 
