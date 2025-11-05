@@ -10,7 +10,7 @@ Before working on this section, ensure that you are installed Anaconda Python an
 
     # pip install -r requirements.yml
 
-    Now, you are go to process to use any feature on this application.
+    Now, you are good to go and use any feature on this application.
 ## Datasets
 
 This folder contains the dataset for basic LLM feed-forawrd data.
@@ -18,13 +18,18 @@ This folder contains the dataset for basic LLM feed-forawrd data.
 
 ## API
 
-This folder contains the endpoint for the access of the model. Using curl or postman to test the api
-http://localhost:8000/generate?prompt="add your prompt here"
+This folder contains the endpoints for the access of the model. You can test the APIs either via curl prompt or via Postman.
 
+    On the terminal run the command above. It will load the unicorn library and an session will be initiate. By default you can access the application using the localhos and port 8000.
+
+    
     # uvicorn main:app --reload
 
-    The command uvicorn run the file using the library and initiate a server.
+    After running the command open on your chosen browser using the following url followed by your prompt to test the API and model.
 
+    http://localhost:8000/generate?prompt="add your prompt here"
+
+    Now, you are good to proceed and testing our API.
 
 ## Notebooks
 
