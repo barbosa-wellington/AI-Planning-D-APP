@@ -21,6 +21,7 @@ const TabsLayout = () => {
         // Adding tab layout for screen selection
         <Tabs screenOptions={{
             headerShown: false,
+            tabBarHideOnKeyboard: true,
             // 👇 REPLACE YOUR OLD screenOptions WITH THIS:
             tabBarActiveTintColor: '#147ac8ff', // Orange-500
             tabBarInactiveTintColor: '#9ca3af', // Gray-400
