@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import ollama 
 from pydantic import BaseModel
@@ -11,6 +11,12 @@ app = FastAPI(title="Dietly API API")
 SYSTEM = """ You are an weather specialist named Dietly. You provide the status of the weather in a given location. 
 You only provides the current city weahter followed by the temperature in graus celsius"""
 
+# add the expo localhost app 
+# origins = [
+#     "http://localhost:8081/ai_assistant"
+# ]
+
+
 # CORS - to allow local dev from Expo Metro
 app.add_middleware(
     CORSMiddleware,
@@ -20,7 +26,9 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class GenerateResquest(BaseModel):
+
+
+class GenerateRequest(BaseModel):
     prompt: str
 
 class GenerateResponse(BaseModel):
@@ -34,7 +42,7 @@ def health():
 
 @app.post("/generate", response_model=GenerateResponse)
 # def generate(prompt: str):
-def generate(req: GenerateResquest):
+def generate(req: GenerateRequest):
 
     try:
         # import the environment variable
@@ -50,4 +58,4 @@ def generate(req: GenerateResquest):
         return GenerateResponse(response=text)
     except Exception as e:
         # present a clean error to the frontend
-        raise HTTPException(status_code=500, detial=f"Ollama error: {e}")
+        raise HTTPException(status_code=500, detail=f"Ollama error: {e}")
