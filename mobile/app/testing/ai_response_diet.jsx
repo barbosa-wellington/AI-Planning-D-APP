@@ -1,18 +1,21 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
 
+
+
+
 const BreakfastPlanScreen = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.aiMessage}>
         
         <View style={styles.mealCard}>
-          <Text style={styles.mealTitle}>🍳 Breakfast</Text>
+          <Text style={styles.mealTitle}> Breakfast</Text>
           <Text style={styles.mealTime}>7:00 AM - 9:00 AM</Text>
-          <Text style={styles.recipeName}>🥑 Avocado Toast with Scrambled Eggs</Text>
+          <Text style={styles.recipeName}> Avocado Toast with Scrambled Eggs</Text>
         </View>
 
-        <View style={styles.nutritionContainer} accessible accessibilityLabel="Nutrition summary: Calories, Carbs, and Fat">
+      <View style={styles.nutritionContainer} accessible accessibilityLabel="Nutrition summary: Calories, Carbs, and Fat">
       <View style={styles.tile} accessibilityLabel="Calories 380">
         <Text style={styles.label}>Calories</Text>
         <Text style={styles.value}>380</Text>
@@ -31,10 +34,26 @@ const BreakfastPlanScreen = () => {
         <Text style={styles.label}>Fat</Text>
         <Text style={styles.value}>20g</Text>
       </View>
+      </View>
+      <View>
+        <Text style={styles.recipeName}> INCREDIENTS:</Text>
 
+          <Text style={styles.descriptT}> 2 Slices whole grain bread</Text>
+          <Text style={styles.descriptT}> 1 ripe Avocado</Text>
+          <Text style={styles.descriptT}> 2 Eggs</Text>
+          <Text style={styles.descriptT}> Cherry tomatoes (optional)</Text>
+          <Text style={styles.descriptT}> Salt, pepper, ad red papper flakes</Text>
+      </View>
+      <View>
+        <Text style={styles.recipeName}> INSTRUCTIONS:</Text>
 
-
-    </View>
+          <Text style={styles.descriptT}> Toast the bread until golden brown</Text>
+          <Text style={styles.descriptT}> Mash avocado and spread on toast</Text>
+          <Text style={styles.descriptT}> Scramble eggs in olive iol</Text>
+          <Text style={styles.descriptT}> Top toast with scrambled eggs</Text>
+          <Text style={styles.descriptT}> Season with salt, pepper, ad red papper flakes</Text>
+      </View>
+    
         <TouchableOpacity style={styles.buttonPrimary}>
           <Text style={styles.buttonText}>💾 Save to My Plans</Text>
         </TouchableOpacity>
@@ -50,7 +69,8 @@ const styles = StyleSheet.create({
   mealCard: { marginTop: 10 },
   mealTitle: { fontSize: 16, fontWeight: "600" },
   mealTime: { fontSize: 12, color: "#666" },
-  recipeName: { fontSize: 14, marginTop: 4 },
+  recipeName: { fontSize: 14, marginTop: 4, color: "#111111ff" },
+  descriptT: { fontSize: 11, color: "#5c5959ff", textAlign: "justify"},
   buttonPrimary: { backgroundColor: "#4f46e5", padding: 12, borderRadius: 12, marginTop: 16, alignItems: "center",
   flexDirection: "row", justifyContent: "space-between", alignItems: "center"
   },
