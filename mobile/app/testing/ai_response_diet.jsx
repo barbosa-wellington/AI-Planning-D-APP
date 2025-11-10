@@ -10,9 +10,9 @@ const BreakfastPlanScreen = () => {
       <View style={styles.aiMessage}>
         
         <View style={styles.mealCard}>
-          <Text style={styles.mealTitle}>🍳 Breakfast</Text>
+          <Text style={styles.mealTitle}> Breakfast</Text>
           <Text style={styles.mealTime}>7:00 AM - 9:00 AM</Text>
-          <Text style={styles.recipeName}>🥑 Avocado Toast with Scrambled Eggs</Text>
+          <Text style={styles.recipeName}> Avocado Toast with Scrambled Eggs</Text>
         </View>
 
       <View style={styles.nutritionContainer} accessible accessibilityLabel="Nutrition summary: Calories, Carbs, and Fat">
