@@ -1,6 +1,6 @@
 {
-  "id": "a6a5b201-0f54-43bc-b6ea-81755ac6689a",
-  "prevId": "eaf271fd-1961-41e4-8744-c1131fcbcb63",
+  "id": "6bca858d-34e5-4303-8bf1-0e4b28081788",
+  "prevId": "7ec02872-81cd-4158-8935-b554f478c2df",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -66,8 +66,8 @@
       "checkConstraints": {},
       "isRLSEnabled": false
     },
-    "public.special": {
-      "name": "special",
+    "public.test": {
+      "name": "test",
       "schema": "",
       "columns": {
         "id": {
