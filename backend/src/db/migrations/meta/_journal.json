@@ -15,6 +15,13 @@
       "when": 1762921250149,
       "tag": "0001_clumsy_tyrannus",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1762932331351,
+      "tag": "0002_testTable",
+      "breakpoints": true
     }
   ]
 }

@@ -12,24 +12,3 @@ export const favoritesTable = pgTable("favorites", {
     createdAt: timestamp("created_at").defaultNow(),
 });
 
-// Create user table
-export const testTable = pgTable("test", {
-    id: serial("id").primaryKey(),
-    userId: text("user_id").notNull(),
-    recipeId: integer("recipe_id").notNull(),
-    title:text("title").notNull(),
-    image: text("image"),
-    cookTime:text("cook_time"),
-    servings:text("servings"),
-    createdAt: timestamp("created_at").defaultNow(),
-});
-
-// Create dietpreferences
-
-
-// Protein choice
-
-
-// FoodItem
-
-// AIPlan
