@@ -12,15 +12,3 @@ export const favoritesTable = pgTable("favorites", {
     createdAt: timestamp("created_at").defaultNow(),
 });
 
-// Create user table
-
-
-// Create dietpreferences
-
-
-// Protein choice
-
-
-// FoodItem
-
-// AIPlan

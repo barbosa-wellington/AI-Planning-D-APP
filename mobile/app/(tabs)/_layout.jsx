@@ -65,6 +65,7 @@ const TabsLayout = () => {
                 options={{
                     title:"profile",
                     tabBarIcon: ({color, size}) => <Ionicons name="person-circle-outline" size={size}
+                    // "settings"
                     color={color} />
                 }}
             />
