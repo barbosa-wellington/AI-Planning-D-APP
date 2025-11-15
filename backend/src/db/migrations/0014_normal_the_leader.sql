@@ -1,0 +1,1 @@
+ALTER TABLE "diet_test" ADD COLUMN "diet_title" text NOT NULL;
