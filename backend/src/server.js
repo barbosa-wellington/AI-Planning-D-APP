@@ -2,7 +2,7 @@ import express from "express";
 import {ENV} from "./config/env.js";
 
 import {db} from  "./config/db.js";
-import { favoritesTable } from "./db/schema.js";
+import { diet_testTable, favoritesTable } from "./db/schema.js";
 import { and, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/neon-http";
 
@@ -94,6 +94,53 @@ app.delete("/api/favorites/:userId/:recipeId", async (req, res) => {
         res.status(500).json({ error: "Something went wrong"});
     }
 
+});
+
+
+// Creating API test for the diet_testTABLE
+// export const diet_testTable = pgTable("diet_test", {
+
+//     id: serial("id").primaryKey(),
+//     diet_title: text("diet_title").notNull(),
+//     time_diet: text("time_diet").notNull(),
+//     time_meal: text("time_meal").notNull(),
+//     calories: integer("calories").notNull(),
+//     protein: integer("protein").notNull(),
+//     carbs: integer("carbs").notNull(),
+//     fat: integer("fat").notNull,
+//     ingridients: text("ingridients"),
+//     instructions: text("instructions"),
+// });
+
+app.post("/api/diets", async (req,res) => {
+    try {
+        const { diet_title, time_diet, time_meal, calories, protein, carbs, fat, ingridients, instructions} = req.body;
+
+        // if (!diet_title || !calories){
+        //     return res.status(400).json({ error: "Missing required fields - this is wrongs"});
+        // }
+
+        const newDiet = await db
+            .insert(diet_testTable)
+            .values({
+                diet_title,
+                time_diet,
+                time_meal,
+                calories,
+                protein,
+                carbs,
+                fat,
+                ingridients,
+                instructions,
+            }).returning();
+            
+            res.status(201).json(newDiet[0]);
+
+    }catch (error) {
+            console.log("Error adding diet information", error);
+            res.status(500).json({ error: "The register could not be store on the database."});
+        
+    }
 });
 
 app.listen(PORT, () => {
