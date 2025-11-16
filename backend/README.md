@@ -16,3 +16,15 @@ This file contains the endpoints for the access of the different table of the ap
     http://localhost:5001/api/"add the API parameter here"
 
     Now, you are good to proceed and testing our API.
+
+## Schema.js
+
+This file contains the code implementation for the database using drizzle-kit to perform (generate - migrate)
+
+   To  generate the drizzle schema run the command:
+
+    # npx drizzle-kit generate
+
+    To migrate the code using drizzle schema run the command:
+
+    # npx drizzle-kit migrate
