@@ -1,46 +1,62 @@
-import React from "react";
-import { View, Text, Image, TouchableOpacity, Dimensions } from "react-native";
+import React, { useEffect, useState } from "react";
+import { View, Text, Image, ImageBackground, Dimensions, StyleSheet, Animated } from "react-native";
 import { useRouter } from "expo-router";
-import { Ionicons } from "@expo/vector-icons";
-import { LinearGradient } from "expo-linear-gradient";
-import { baseStyles } from "../assets/styles/base"; // forward slashes, no .js needed
+import { baseStyles } from "../assets/styles/base";
 
-export default function Landing() {
+export default function Splash() {
   const router = useRouter();
-  const { width, height } = Dimensions.get("window");
+  const { width } = Dimensions.get("window");
+  const [progress] = useState(new Animated.Value(0));
+/*
+  useEffect(() => {
+    // Animate progress from 0 to 100% over 3 seconds
+    Animated.timing(progress, {
+      toValue: 1,
+      duration: 3000,
+      useNativeDriver: false,
+    }).start(() => {
+      router.replace("/get-started"); // Navigate to Get Started screen
+    });
+  }, []);
+*/
+  const progressBarWidth = progress.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0, width * 0.8], // 80% of screen width
+  });
 
   return (
-    <LinearGradient
-      colors={["#a7f3d0", "#6ee7b7", "#60a5fa"]}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 1 }}
-      style={baseStyles.container} // use baseStyles
+    <ImageBackground
+      source={require("../assets/images/Dietly-bg.png")}
+      style={baseStyles.container}
+      resizeMode="cover"
     >
-      {/* Logo */}
       <Image
-        source={require("../assets/images/Dietly_logo_white.png")} 
-        style={{
-          width: 80,
-          height: 80,
-          marginBottom: 10,
-        }}
+        source={require("../assets/images/Dietly_logo_white.png")}
+        style={{ width: 80, height: 80, marginBottom: 10 }}
         resizeMode="contain"
       />
-
-      {/* Title */}
       <Text style={baseStyles.title}>Dietly</Text>
-
-      {/* Subtitle */}
       <Text style={baseStyles.subtitle}>Your AI-powered diet planner</Text>
 
-      {/* Arrow Button */}
-      <TouchableOpacity
-        style={baseStyles.arrowButton} // use baseStyles
-        onPress={() => router.push("/sign-in")}
-        activeOpacity={0.8}
-      >
-        <Ionicons name="arrow-forward-circle" size={64} color="#fff" />
-      </TouchableOpacity>
-    </LinearGradient>
+      {/* Custom progress bar */}
+      <View style={styles.progressContainer}>
+        <Animated.View style={[styles.progressBar, { width: progressBarWidth }]} />
+      </View>
+    </ImageBackground>
   );
 }
+
+const styles = StyleSheet.create({
+  progressContainer: {
+    width: "80%",
+    height: 8,
+    backgroundColor: "rgba(255,255,255,0.3)",
+    borderRadius: 4,
+    marginTop: 40,
+  },
+  progressBar: {
+    height: "100%",
+    backgroundColor: "#fff",
+    borderRadius: 4,
+  },
+});
