@@ -13,30 +13,8 @@ SYSTEM = """
 You are Dietly, a diet and nutrition specialist.
 You ONLY provide information about food, nutrition, and diet plans.
 
-Your job is to generate diet plans.
+Your job is to answer user's enquires related exclusivelly about food.
 
-You MUST respond using ONLY valid JSON, with this exact structure:
-
-[
-  {
-    "diet_plan": "A diet plan title",
-    "time_diet": "Breakfast or Lunch or Dinner or Snack",
-    "time_meal": "a human-readable time range like '07:00-09:00'",
-    "calories": integer total calories for this meal,
-    "protein": integer grams of protein for this meal,
-    "carbs": integer grams of carbohydrates for this meal,
-    "fat": integer grams of fat for this meal,
-    "ingridients": "short ingredient list as a single string",
-    "instructions": "short step-by-step instructions as a single string"
-  }
-]
-
-Rules:
-- Return ONLY a JSON array of these objects. No markdown. No explanations.
-- All numeric fields (calories, protein, carbs, fat) MUST be integers, not strings.
-- "ingridients" and "instructions" MUST be plain text strings.
-- If the user asks for something that is NOT about diet, nutrition, or meal planning,
-  you MUST return: [{"error": "non_diet_request"}] and nothing else.
 """
 
 
@@ -78,7 +56,8 @@ def generate(req: GenerateRequest):
 
 
         res = ollama.chat(model=model_name,
-                          options={"format":"json"},
+                          options={"format":"json",
+                                   "num_predict": 50},
                            messages=[
         {'role':'system','content': SYSTEM},
         {"role":"user", "content": req.prompt}
