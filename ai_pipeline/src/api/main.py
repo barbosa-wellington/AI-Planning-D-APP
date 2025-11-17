@@ -40,22 +40,6 @@ Rules:
 """
 
 
-# SYSTEM = """ You are a diet and nutricionist specialist named Dietly. 
-
-# Your output should be on a structure json fromat exactly like the one bellow. You are not allow to write anything other than the json object:
-
-# [
-# {
-#     "country": the country that you will get the capital of
-#     "capital": the capital of the country stated
-# }
-# ]
-# """
-# add the expo localhost app 
-# origins = [
-#     "http://localhost:8081/ai_assistant"
-# ]
-
 
 # CORS - to allow local dev from Expo Metro
 app.add_middleware(
@@ -68,16 +52,20 @@ app.add_middleware(
 
 
 
-class GenerateRequest(BaseModel):
-    prompt: str
-
-class GenerateResponse(BaseModel):
-    response: str
 
 
 @app.get("/health")
 def health():
     return {"status":"This API is working correctly."}
+
+
+
+
+class GenerateRequest(BaseModel):
+    prompt: str
+
+class GenerateResponse(BaseModel):
+    response: str
 
 
 @app.post("/generate", response_model=GenerateResponse)
@@ -90,6 +78,7 @@ def generate(req: GenerateRequest):
 
 
         res = ollama.chat(model=model_name,
+                          options={"format":"json"},
                            messages=[
         {'role':'system','content': SYSTEM},
         {"role":"user", "content": req.prompt}
