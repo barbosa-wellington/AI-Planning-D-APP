@@ -12,6 +12,7 @@ export const favoritesTable = pgTable("favorites", {
     createdAt: timestamp("created_at").defaultNow(),
 });
 
+<<<<<<< HEAD
 export const testTable = pgTable("test", {
     id: serial("id").primaryKey(),
     userId: text("user_id").notNull(),
@@ -22,3 +23,12 @@ export const testTable = pgTable("test", {
     servings:text("servings"),
     createdAt: timestamp("created_at").defaultNow(),
 });
+=======
+// Create user table
+
+
+// Create dietpreferences
+
+
+// Protein choice
+>>>>>>> main

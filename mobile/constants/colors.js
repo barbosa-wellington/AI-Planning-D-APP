@@ -103,20 +103,20 @@ const dietAIOceanTheme = {
   card: "#FFFFFF",              // White cards
   
   // Additional colors for diet app
-  success: "#059669",           // Ocean-tinted green
+  success: "#73c5abff",           // Ocean-tinted green
   warning: "#0891B2",           // Ocean-tinted orange
   accent: "#7C3AED",            // Purple accent
 }
 
 const dietlyTheme = {
   background: "#F0FDF4",
-  primary: "#10B981",
+  primary: "#10B981", //#1c644cff
   secondary: "#3B82F6",
   accent: "#14B8A6",
   text: "#111827",
   textLight: "#6B7280",
   border: "#D1D5DB",
-  success: "#22C55E",
+  success: "#1b7d3fff",
   warning: "#F59E0B",
   error: "#EF4444",
   white: "#FFFFFF",
