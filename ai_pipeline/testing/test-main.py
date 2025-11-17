@@ -15,15 +15,9 @@ class PetList(BaseModel):
 
 # Testing adapting the example into the project perspective
 class Receipe(BaseModel):
-    diet_plan: str
-    time_diet: str
-    time_meal: str
-    calories: int
-    prontein: int
-    carbs: int
-    fat: int
+    name: str
     ingridients: list
-    instructions: str
+    timeprep: int
 
 class RecipeList(BaseModel):
     recepies: list[Receipe]
@@ -33,8 +27,10 @@ respose = chat(
         {
             'role':'user',
             'content':'''
-                json\n[\n  {\n    \"diet_plan\": \"Simple Vegetarian Breakfast\",\n    \"time_diet\": \"Breakfast\",\n    \"time_meal\": \"07:00-09:00\",\n    \"calories\": 350,\n    \"protein\": 20,\n    \"carbs\": 40,\n    \"fat\": 15,\n    \"ingridients\": \"1/2 cup rolled oats, 1 cup almond milk, 1/4 cup blueberries, 1 tbsp chia seeds\",\n    \"instructions\": \"Combine oats and almond milk in a pot. Bring to a boil, then reduce heat and simmer for 5 minutes. Stir in blueberries and chia seeds. Serve warm.\"\n  }\n]\n
-                
+                I have a recipe list.
+                This is a penne calabrase. This dish has the following ingridients garlic, olives,
+                sofrito, salami, stock, and penne.
+                This dish has a timeprep of 5 minutes.
 ''',
         }
     ],
