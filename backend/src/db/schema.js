@@ -26,3 +26,5 @@ export const diet_testTable = pgTable("diet_test", {
     ingridients: text("ingridients"),
     instructions: text("instructions"),
 });
+
+// test-of table for AI service
