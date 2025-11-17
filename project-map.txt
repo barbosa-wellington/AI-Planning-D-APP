@@ -1,28 +1,70 @@
 🚀 PROJECT: AI-Planning-D-APP
 📍 PATH: C:\Users\user\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 08/10/2025, 7:26:25 pm
+📅 GENERATED: 11/11/2025, 8:42:40 pm
 
 📁 PROJECT STRUCTURE:
 ==================================================
 ├── 📄 .gitattributes (66B)
+├── 📁 ai_pipeline/
+│   ├── 📄 .env.example (97B)
+│   ├── 📁 datasets/
+│   │   ├── 📄 FOOD-DATA-GROUP1.csv (95.5KB)
+│   │   ├── 📄 FOOD-DATA-GROUP2.csv (50.8KB)
+│   │   ├── 📄 FOOD-DATA-GROUP3.csv (96.1KB)
+│   │   ├── 📄 FOOD-DATA-GROUP4.csv (38.0KB)
+│   │   └── 📄 FOOD-DATA-GROUP5.csv (119.0KB)
+│   ├── 📄 environment.yml (2.2KB)
+│   ├── 📁 notebooks/
+│   │   ├── 📁 .ipynb_checkpoints/
+│   │   │   ├── 📄 EDA-Data-checkpoint.ipynb (65.1KB)
+│   │   │   └── 📄 Untitled-checkpoint.ipynb (2.0KB)
+│   │   ├── 📄 EDA-Data.ipynb (63.2KB)
+│   │   ├── 📄 test.json (991B)
+│   │   └── 📄 Untitled.ipynb (3.2KB)
+│   ├── 📄 README.md (1.6KB)
+│   ├── 📄 requirements.txt (121B)
+│   ├── 📄 requirements.yml (2.7KB)
+│   ├── 📁 src/
+│   │   ├── 📁 api/
+│   │   │   ├── 📄 main.py (2.2KB)
+│   │   │   ├── 📁 routers/
+│   │   │   │   ├── 📄 generate.py (0B)
+│   │   │   │   └── 📄 health.py (118B)
+│   │   ├── 📄 config.py (500B)
+│   │   └── 📁 models/
+│   │       ├── 📁 adapters/
+│   │       │   └── 📄 generate.ts (625B)
+│   │       ├── 📄 ollama_client.py (0B)
+│   │       ├── 📄 package-lock.json (831B)
+│   │       └── 📄 package.json (56B)
+│   └── 📁 testing/
+│       ├── 📄 chat_01.txt (1.4KB)
+│       ├── 📄 chat_02.txt (488B)
+│       ├── 📄 chat_03.txt (1.7KB)
+│       ├── 📄 history_chat.txt (547B)
+│       ├── 📄 model-main.py (1.0KB)
+│       ├── 📄 model_response.txt (2.0KB)
+│       ├── 📄 recipe-gen.json (1.7KB)
+│       ├── 📄 test-main.py (1.1KB)
+│       └── 📄 test-model.py (1.4KB)
 ├── 📁 backend/
 │   ├── 📄 .gitignore (20B)
 │   ├── 📄 drizzle.config.js (351B)
 │   ├── 📄 package-lock.json (81.4KB)
 │   ├── 📄 package.json (526B)
+│   ├── 📄 README.md (154B)
 │   └── 📁 src/
 │       ├── 📁 config/
 │       │   ├── 📄 cron.js (542B)
 │       │   ├── 📄 db.js (334B)
 │       │   └── 📄 env.js (214B)
 │       ├── 📁 db/
-│       │   ├── 📄 data-pipeline.py (80B)
 │       │   ├── 📁 migrations/
 │       │   │   ├── 📄 0000_remarkable_sunset_bain.sql (236B)
 │       │   │   └── 📁 meta/
 │       │   │       ├── 📄 0000_snapshot.json (1.8KB)
 │       │   │       └── 📄 _journal.json (216B)
-│       │   └── 📄 schema.js (511B)
+│       │   └── 📄 schema.js (619B)
 │       └── 📄 server.js (2.8KB)
 ├── 📁 mobile/
 │   ├── 📁 .cursor/
@@ -33,18 +75,26 @@
 │   │   │   ├── 📄 sign-in.jsx (6.2KB)
 │   │   │   ├── 📄 sign-up.jsx (6.4KB)
 │   │   │   ├── 📄 verify-email.jsx (4.8KB)
-│   │   │   └── 📄 _layout.tsx (442B)
+│   │   │   └── 📄 _layout.tsx (491B)
 │   │   ├── 📁 (tabs)/
-│   │   │   ├── 📄 ai_assistant.jsx (8.2KB)
-│   │   │   ├── 📄 daily_meal.jsx (271B)
-│   │   │   ├── 📄 favorites.jsx (274B)
-│   │   │   ├── 📄 food_search.jsx (280B)
-│   │   │   ├── 📄 index.jsx (1.9KB)
+│   │   │   ├── 📄 ai_assistant.jsx (6.0KB)
+│   │   │   ├── 📄 dietplan_search.jsx (299B)
+│   │   │   ├── 📄 home_screen.jsx (2.0KB)
 │   │   │   ├── 📄 user_profile.jsx (1.4KB)
-│   │   │   ├── 📄 wellington.jsx (276B)
-│   │   │   └── 📄 _layout.jsx (3.5KB)
+│   │   │   └── 📄 _layout.jsx (3.3KB)
+│   │   ├── 📁 ai_settings/
 │   │   ├── 📄 index.jsx (1.7KB)
-│   │   └── 📄 _layout.tsx (1.3KB)
+│   │   ├── 📁 screens/
+│   │   │   ├── 📄 daily_meal.jsx (271B)
+│   │   │   └── 📄 favorites.jsx (325B)
+│   │   ├── 📁 testing/
+│   │   │   ├── 📄 ai_response_diet.jsx (4.1KB)
+│   │   │   ├── 📄 arvy.jsx (264B)
+│   │   │   ├── 📄 Shalini.jsx (268B)
+│   │   │   ├── 📄 shameem.jsx (269B)
+│   │   │   └── 📄 wellington.jsx (276B)
+│   │   ├── 📁 user_settings/
+│   │   └── 📄 _layout.tsx (1.4KB)
 │   ├── 📄 app.json (1.2KB)
 │   ├── 📁 assets/
 │   │   ├── 📁 images/
@@ -77,18 +127,17 @@
 │   ├── 📁 components/
 │   │   └── 📄 SafeScreen.jsx (594B)
 │   ├── 📁 constants/
-│   │   └── 📄 colors.js (3.0KB)
+│   │   └── 📄 colors.js (3.2KB)
 │   ├── 📄 eslint.config.js (237B)
 │   ├── 📄 expo-env.d.ts (110B)
-│   ├── 📄 package-lock.json (538.9KB)
+│   ├── 📄 package-lock.json (547.7KB)
 │   ├── 📄 package.json (1.5KB)
 │   ├── 📄 README.md (1.7KB)
 │   ├── 📁 services/
 │   │   └── 📄 mealAPI.js (728B)
 │   └── 📄 tsconfig.json (242B)
-├── 📄 project-map.txt (10.3KB)
 ├── 📄 project-mapper.js (5.5KB)
-└── 📄 README.md (483B)
+└── 📄 README.md (704B)
 
 📋 IMPORTANT FILE CONTENTS:
 ==================================================
@@ -310,6 +359,21 @@ This project was developed as part of the Work Integrated Learning at university
 
 Skills Showcased: Python, TensorFlow/Keras, JavaScript, PostGress, React, Model Training, Software Architecture, Technical Documentation
 
+
+
+# Technologies Stack
+
+The project is created with:
+*  Python: 3.9
+*  TypeScript
+*  Javascript
+*  Pandas:
+*  Scikit-learn:
+*  Numpy
+*  Nodejs: 22.19.0
+*  Npm: 10.9.3
+*  npx expo: 54.0.13
+*  Ollama: 0.12.0
 
 ==================================================
 

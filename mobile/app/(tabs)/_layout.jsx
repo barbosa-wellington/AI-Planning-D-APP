@@ -21,6 +21,7 @@ const TabsLayout = () => {
         // Adding tab layout for screen selection
         <Tabs screenOptions={{
             headerShown: false,
+            tabBarHideOnKeyboard: true,
             // 👇 REPLACE YOUR OLD screenOptions WITH THIS:
             tabBarActiveTintColor: '#147ac8ff', // Orange-500
             tabBarInactiveTintColor: '#9ca3af', // Gray-400
@@ -43,7 +44,7 @@ const TabsLayout = () => {
             },
         }}>
             <Tabs.Screen
-                name="index"
+                name="home_screen"
                 options={{
                     title:"home",
                     tabBarIcon: ({color, size}) => <Ionicons name="home" size={size} color={color} 
@@ -51,26 +52,20 @@ const TabsLayout = () => {
                 }}
             />
             <Tabs.Screen
-                name="food_search"
+                name="dietplan_search"
                 options={{
                     title:"food",
                     tabBarIcon: ({color, size}) => <Ionicons name="search" size={size}
                     color={color} />
                 }}
             />
-            <Tabs.Screen
-                name="favorites"
-                options={{
-                    title:"favorites",
-                    tabBarIcon: ({color, size}) => <Ionicons name="heart" size={size}
-                    color={color} />
-                }}
-            />
+            
             <Tabs.Screen
                 name="user_profile"
                 options={{
                     title:"profile",
                     tabBarIcon: ({color, size}) => <Ionicons name="person-circle-outline" size={size}
+                    // "settings"
                     color={color} />
                 }}
             />
@@ -80,7 +75,7 @@ const TabsLayout = () => {
                     title:"ai",
                     tabBarIcon:({ focused, color, size }) => (
                         <Image
-                                source={require("../../assets/images/ai-icon.png")} // 👈 your logo path
+                                source={require("../../assets/images/ai-icon.png")} 
                                 style={{
                                 width: size,
                                 height: size,

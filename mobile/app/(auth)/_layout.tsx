@@ -7,7 +7,8 @@ export default function AuthRoutesLayout() {
 
   // If user signIn then he will be redirect to the home page.
   if (isSignedIn) {
-    return <Redirect href={'/(tabs)'} />;
+    // return <Redirect href={'/(tabs)'} />;
+    return <Redirect href="/home_screen" />;
   }
 
 

@@ -1,8 +1,13 @@
+import React, { useState, useEffect } from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { ActivityIndicator, View } from "react-native";
+import * as Font from "expo-font";
+
 // Clerk imports for authentication login
-import { ClerkProvider, useAuth } from '@clerk/clerk-expo'
-import { Slot, Redirect, usePathname } from 'expo-router'
-import { tokenCache } from '@clerk/clerk-expo/token-cache'
+import { ClerkProvider, useAuth } from "@clerk/clerk-expo";
+import { Slot, Redirect, usePathname } from "expo-router";
+import { tokenCache } from "@clerk/clerk-expo/token-cache";
+
 import SafeScreen from "@/components/SafeScreen";
 
 function RootNavigator() {
@@ -11,37 +16,51 @@ function RootNavigator() {
 
   if (!isLoaded) return null; // still loading Clerk
 
-  // this code is working
-   // If user is not signed in AND tries to go inside tabs → send to landing
-  if (!isSignedIn && pathname.startsWith('/(tabs)')) {
+  // redirect logic
+  if (!isSignedIn && pathname.startsWith("/(tabs)")) {
     return <Redirect href="/" />;
   }
 
-  // If user is signed in but tries to go to auth → send to tabs
-  if (isSignedIn && pathname.startsWith('/(auth)')) {
-    return <Redirect href="/(tabs)" />;
-  
+  if (isSignedIn && pathname.startsWith("/(auth)")) {
+    return <Redirect href="/home_screen" />;
   }
-
 
   return <Slot />;
 }
 
 export default function RootLayout() {
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+
+  useEffect(() => {
+    async function loadFonts() {
+      await Font.loadAsync({
+        "Shorelines Script Bold": require("../assets/fonts/ShorelinesScriptBold.otf"), // Logo font
+        "Poppins-Light": require("../assets/fonts/Poppins-Light.ttf"),
+        "Poppins-Regular": require("../assets/fonts/Poppins-Regular.ttf"),
+        "Poppins-Medium": require("../assets/fonts/Poppins-Medium.ttf"),
+        "Montserrat-Regular": require("../assets/fonts/Montserrat-Regular.ttf"),
+        "Montserrat-Medium": require("../assets/fonts/Montserrat-Medium.ttf"),
+      });
+      setFontsLoaded(true);
+    }
+
+    loadFonts();
+  }, []);
+
+  if (!fontsLoaded) {
+    // Show a spinner until fonts are loaded
+    return (
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
+
   return (
-    // This ClerkProvider function will wrapper-up the application for authentication process. 
     <ClerkProvider tokenCache={tokenCache}>
-      {/* Modify the the view so that it will be visible on a screen structure. */}
-    
-    {/* <SafeAreaView style={{ flex: 1}}>
-      <Slot />
-    </SafeAreaView> */}
-    <SafeScreen>
-      {/* <Slot / > */}
-      <RootNavigator/>
-    </SafeScreen>
+      <SafeScreen>
+        <RootNavigator />
+      </SafeScreen>
     </ClerkProvider>
-
-
-  ) ;
+  );
 }

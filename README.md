@@ -7,3 +7,18 @@ This project was developed as part of the Work Integrated Learning at university
 
 Skills Showcased: Python, TensorFlow/Keras, JavaScript, PostGress, React, Model Training, Software Architecture, Technical Documentation
 
+
+
+# Technologies Stack
+
+The project is created with:
+*  Python: 3.9
+*  TypeScript
+*  Javascript
+*  Pandas:
+*  Scikit-learn:
+*  Numpy
+*  Nodejs: 22.19.0
+*  Npm: 10.9.3
+*  npx expo: 54.0.13
+*  Ollama: 0.12.0

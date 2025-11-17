@@ -1,0 +1,25 @@
+"what is the weahter in melbourne now? "
+Streaming respone from Ollama:
+{
+"location": "Melbourne, Australia",
+"time": "2024-05-16T08:38:24+10:00",
+"temperature": {
+"current": 19.5,
+"unit": "°C",
+"feels_like": 19.5,
+"unit": "°C"
+},
+"condition": "Partly Cloudy",
+"wind": {
+"speed": 18.3,
+"direction": "SW",
+"unit": "km/h"
+},
+"humidity": 69,
+"pressure": 1023.6,
+"unit": "hPa",
+"visibility": 10000,
+"unit": "m",
+"source": "https://iln.io/api/weather/v3?location=Melbourne,Australia&time=now"
+}
+testing code using Ollama model
