@@ -134,7 +134,8 @@ Rules:
 
 @app.post("/diet/plan", response_model=DietPlan)
 def generate_diet_plan(req: DietPlanRequest):
-    model_name = "Mistral:latest"  # or "Gemma3:4b" if you prefer
+    # model_name = "Mistral:latest"  # or "Gemma3:4b" if you prefer
+    model_name = "phi3:mini"
 
     try:
         # Ask Ollama to follow the DietPlan schema
