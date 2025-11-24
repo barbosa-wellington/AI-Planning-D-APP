@@ -29,9 +29,9 @@ app.use(
 
 
 // This is a import for the Fitbit API
-import fitbitRoutes from "../fitbit/router.js"
+// import fitbitRoutes from "../fitbit/router.js"
 
-app.use("/fitbit", fitbitRoutes);
+// app.use("/fitbit", fitbitRoutes);
 
 
 app.get("/api/health", (req,res) => {
