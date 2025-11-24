@@ -1,6 +1,6 @@
 import {pgTable, uuid, serial, text, integer, boolean, timestamp, date, doublePrecision, numeric, jsonb,} from "drizzle-orm/pg-core";
 
-// Create the first table on the postgresql database - Noen host
+// Create the first table on the postgresql database - Neon host
 export const favoritesTable = pgTable("favorites", {
     id: serial("id").primaryKey(),
     userId: text("user_id").notNull(),
@@ -23,17 +23,15 @@ export const diet_testTable = pgTable("diet_test", {
     protein: integer("protein").notNull(),
     carbs: integer("carbs").notNull(),
     fat: integer("fat").notNull(),
-    ingridients: text("ingridients"),
+    ingredients: text("ingridients"),
     instructions: text("instructions"),
 });
 
 //Test-of table for USER TABLE
 export const userTable = pgTable("users",{
 user_id: uuid("user_id").defaultRandom().primaryKey(),
-clerk_user_id: text("clerk_user_id").unique().notNull(),
 name: text("name").notNull(),
 email: text("email").unique().notNull(),
-created_at: timestamp("created_at").defaultNow().notNull(),
 });
 
 //Test-of table for FITBIT TABLE
@@ -46,7 +44,6 @@ heart_rate_avg: doublePrecision("heart_rate_avg").notNull(),
 sleep_hours: doublePrecision("sleep_hours").notNull(),
 calories_burned: doublePrecision("calories_burned").notNull(),
 source: text("source").notNull(),  // "fitbit" | "manual"
-last_synced_at: timestamp("last_synced_at", { withTimezone: true }).defaultNow(),
 });
 
 //Test-of table for DIET PREFERENCES TABLE
@@ -55,7 +52,6 @@ preference_id: uuid("preference_id").defaultRandom().primaryKey(),
 user_id: uuid("user_id").references(() => userTable.user_id).notNull(),
 type: text("type").notNull(),             // Vegan, Keto, etc.
 description: text("description"),
-created_at: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
 //Test-of table for Food Category
@@ -68,8 +64,6 @@ parent_id: integer("parent_id").references(() => foodCategory.category_id),
 export const food = pgTable("food", {
 food_id: uuid("food_id").defaultRandom().primaryKey(),
 name: text("name").notNull(),
-brand: text("brand"),
-barcode: text("barcode"),
 external_id: text("external_id"),      // ID from external DB
 source_api: text("source_api"),        // FoodDataCentral | FoodFacts | Dataset
 calories_per_100g: numeric("calories_per_100g").notNull(),
@@ -79,8 +73,6 @@ fat_per_100g:      numeric("fat_per_100g").notNull(),
 fiber_per_100g:    numeric("fiber_per_100g"),
 sugar_per_100g:    numeric("sugar_per_100g"),
 sodium_per_100g:   numeric("sodium_per_100g"),
-last_updated: timestamp("last_updated", { withTimezone: true }).defaultNow().notNull(),
-created_at: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 category_id: integer("category_id").references(() => foodCategory.category_id).notNull(),
 });
 
@@ -94,11 +86,6 @@ cook_time_minutes: integer("cook_time_minutes"),
 servings: integer("servings"),
 difficulty: text("difficulty"),          // Easy | Medium | Hard
 image_url: text("image_url"),
-instructions: jsonb("instructions"),     // step-by-step JSON
-created_by: text("created_by").notNull(),// 'ai_generated' or user_id string
-created_at: timestamp("created_at", { withTimezone: true })
-.defaultNow()
-.notNull(),
 });
 
 //Test-of table for RECIPE INGREDIENT
@@ -113,19 +100,16 @@ unit: text("unit").notNull(), // grams | cups | pieces | etc.
 //Test-of table for DIET PLAN
 export const dietPlan = pgTable("diet_plan", {
 plan_id: uuid("plan_id").defaultRandom().primaryKey(),
-user_id: uuid("user_id")
-.references(() => userTable.user_id).notNull(),
+user_id: uuid("user_id").references(() => userTable.user_id).notNull(),
 start_date: date("start_date").notNull(),
 end_date: date("end_date"),
 goal_type: text("goal_type"), // weight_loss, maintenance, etc.
-created_at: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
 //Test-of table for MEAL
 export const meal = pgTable("meal", {
 meal_id: uuid("meal_id").defaultRandom().primaryKey(),
-plan_id: uuid("plan_id")
-.references(() => dietPlan.plan_id).notNull(),
+plan_id: uuid("plan_id").references(() => dietPlan.plan_id).notNull(),
 meal_date: date("meal_date").notNull(),
 meal_slot: text("meal_slot").notNull(), // breakfast | lunch | dinner | snack
 });
@@ -133,8 +117,7 @@ meal_slot: text("meal_slot").notNull(), // breakfast | lunch | dinner | snack
 //Test-of table for MEAL ITEM
 export const mealItem = pgTable("meal_item", {
 item_id: uuid("item_id").defaultRandom().primaryKey(),
-meal_id: uuid("meal_id")
-.references(() => meal.meal_id).notNull(),
+meal_id: uuid("meal_id").references(() => meal.meal_id).notNull(),
 recipe_id: uuid("recipe_id").references(() => recipe.recipe_id),
 food_id: uuid("food_id").references(() => food.food_id),
 quantity: numeric("quantity").notNull(),
@@ -144,23 +127,19 @@ unit: text("unit").notNull(),
 //Test-of table for TARGET ADJUSTMENTS
 export const targetAdjustments = pgTable("target_adjustments", {
 adjustment_id: uuid("adjustment_id").defaultRandom().primaryKey(),
-user_id: uuid("user_id")
-.references(() => userTable.user_id).notNull(),
+user_id: uuid("user_id").references(() => userTable.user_id).notNull(),
 calories: integer("calories").notNull(), // change in daily calories
-created_at: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
 //Test-of table for CONSUMPTION LOG
 export const consumptionLog = pgTable("consumption_log", {
 consumption_id: uuid("consumption_id").defaultRandom().primaryKey(),
-user_id: uuid("user_id")
-.references(() => userTable.user_id).notNull(),
+user_id: uuid("user_id").references(() => userTable.user_id).notNull(),
 meal_id: uuid("meal_id").references(() => meal.meal_id),
 recipe_id: uuid("recipe_id").references(() => recipe.recipe_id),
 food_id: uuid("food_id").references(() => food.food_id),
 quantity: numeric("quantity").notNull(),
 unit: text("unit").notNull(),
-consumed_at: timestamp("consumed_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
 //Test-of table for AI CHAT SESSIONS
@@ -168,7 +147,6 @@ export const aiChatSessions = pgTable("ai_chat_sessions", {
 session_id: uuid("session_id").defaultRandom().primaryKey(),
 user_id: uuid("user_id").references(() => userTable.user_id).notNull(),
 purpose: text("purpose"), // e.g. "initial_plan", "adjustment", etc.
-created_at: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
 //Test-of table for AI CHAT MESSAGES
@@ -177,7 +155,6 @@ message_id: uuid("message_id").defaultRandom().primaryKey(),
 session_id: uuid("session_id").references(() => aiChatSessions.session_id).notNull(),
 sender: text("sender").notNull(), // "user" | "ai"
 tokens: integer("tokens"),
-created_at: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
 //Test-of table for AI SUGGESTIONS
@@ -188,7 +165,6 @@ recipe_id: uuid("recipe_id").references(() => recipe.recipe_id),
 food_id: uuid("food_id").references(() => food.food_id),
 plan_id: uuid("plan_id").references(() => dietPlan.plan_id),
 meal_id: uuid("meal_id").references(() => meal.meal_id),
-created_at: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
 //Test-of table for User Targets
