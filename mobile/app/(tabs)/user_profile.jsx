@@ -3,18 +3,24 @@ import React from "react";
 
 // Adding authentication verification for log-out
 import { useAuth } from "@clerk/clerk-expo";
+import { useUser } from "@clerk/clerk-expo";
 
 
 const user_profile = () => {
   // calling the function for logoff
     const { signOut } = useAuth();
+    const { user } = useUser();
+
+    const userEmail = user.primaryEmailAddress.emailAddress;
+    const username = user.firstName;
 
 
     return (
         <View style={{flex:1, backgroundColor: "fff"}}>
       {/* Page Content */}
       <Text>User profile This is a test page.</Text>
-      <Text> Test of logout</Text>
+      <Text> Hi {username} </Text>
+        <Text>{userEmail}</Text>
       
 
 
