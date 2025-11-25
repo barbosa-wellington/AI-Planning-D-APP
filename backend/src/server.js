@@ -2,7 +2,6 @@ import express from "express";
 import {ENV} from "./config/env.js";
 
 import {db} from  "./config/db.js";
-import { diet_testTable, favoritesTable, userTable, diet_plan } from "./db/schema.js";
 import { and, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/neon-http";
 
