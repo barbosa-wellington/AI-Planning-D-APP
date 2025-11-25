@@ -1,0 +1,1 @@
+// File that contain the API for fitbit

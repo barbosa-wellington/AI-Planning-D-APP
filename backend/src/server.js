@@ -7,7 +7,7 @@ import { and, eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/neon-http";
 
 import job from "./config/cron.js";
-
+import cors from "cors";
 // the dotenv will ensure that the listening port will be 5001 from the env file.
 // import "dotenv/config"
 
@@ -18,6 +18,20 @@ const PORT = ENV.PORT || 5001;
 if (ENV.NODE_ENV === "production") job.start();
 
 app.use(express.json())
+
+// ✅ Enable CORS for your frontend origin (Expo web)
+app.use(
+  cors({
+    origin: "http://localhost:8081",  // Expo web origin
+  })
+);
+
+
+
+// This is a import for the Fitbit API
+// import fitbitRoutes from "../fitbit/router.js"
+
+// app.use("/fitbit", fitbitRoutes);
 
 
 app.get("/api/health", (req,res) => {
@@ -143,9 +157,10 @@ app.post("/api/diets", async (req,res) => {
     }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
     console.log("Server is running on PORT:", PORT)
 });
+<<<<<<< HEAD
 
 app.get("/api/users/:userId", async (req, res) => {
   try {
@@ -272,3 +287,5 @@ app.delete("/api/diet-plans/:userId/:planId", async (req, res) => {
 app.listen(PORT, () => {
   console.log("Server is running on PORT:", PORT)
 });
+=======
+>>>>>>> main
