@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import Svg, { Rect, Circle, Path } from 'react-native-svg';
+import { useRouter } from 'expo-router';
 
 const COLORS = {
   background: '#F9FAFB',
@@ -38,8 +39,16 @@ const handlePress = async () => {
     console.log('Connect to Fitbit');
   };
 
+  const router = useRouter();
   return (
     <SafeAreaView style={styles.container}>
+
+      {/* Define router for back arrow */}
+                          <TouchableOpacity
+                            onPress={() => router.push("/user_profile")}
+                        activeOpacity={0.8}>
+                      <Ionicons name="arrow-back" size={30} color="#10B981" />
+                    </TouchableOpacity>
       <View style={styles.content}>
         {/* Fitbit Logo */}
         <View style={styles.logoContainer}>
