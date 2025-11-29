@@ -1,81 +1,3 @@
-// import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
-// import React from "react";
-
-// import { Ionicons } from '@expo/vector-icons';
-// import { router } from 'expo-router';
-
-
-
-// // Add this function in your component
-// // const handleChatPress = () => {
-// //   // Navigate to chat screen (you'll create this later)
-// //   router.push('/ai_assistant');
-// //   // Or for now, just log
-// //   console.log('AI Chat pressed');
-// // };
-// const home_screen = () => {
-
-
-//     return (
-
-      
-
-//         <View>
-//       {/* Page Content */}
-//       <Text >HomeScreen This is a test page.</Text>
-//       <Text> Starting working on the development of APIs</Text>
-//       <Text> Testing of log-off screen bottom</Text>
-
-
-//       {/* <Text style={styles.greeting}>Hi, Wellington 👋</Text>
-//       <Text style={styles.subtitle}>Here’s your wellness summary for today</Text> */}
-//       {/* <Text>HomeScreen This is a test page. Last test</Text> */}
-
-
-
-
-//       {/* Floating AI Chat Button */}
-//       {/* Create the icon of chat and add a redirect for a page service. */}
-//       {/* // Add this JSX right before your closing </View> or </SafeAreaView> */}
-//           {/* <TouchableOpacity 
-//             style={styles.floatingButton}
-//             onPress={handleChatPress}
-//             activeOpacity={0.8}
-//           >
-//             <Ionicons name="chatbubbles" size={28} color="white" />
-//           </TouchableOpacity> */}
-//     </View>
-//   );
-// };
-
-
-// // // Add these styles to your StyleSheet.create({})
-// const styles = StyleSheet.create({
-//   // ... your existing styles
-  
-//   floatingButton: {
-//     position: 'absolute',
-//     bottom: 24,
-//     right: 24,
-//     width: 56,
-//     height: 56,
-//     borderRadius: 28,
-//     backgroundColor: '#3B82F6',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     shadowColor: '#3B82F6',
-//     shadowOffset: { width: 0, height: 4 },
-//     shadowOpacity: 0.3,
-//     shadowRadius: 8,
-//     elevation: 8,
-//   },
-// });
-
-
-
-// export default home_screen;
-
-// mobile/app/(tabs)/home_screen.jsx
 import React from 'react';
 import {
   View,
@@ -108,19 +30,20 @@ export default function HomeScreen() {
         <View style={styles.summaryCard}>
           <Text style={styles.cardTitle}>Today's Summary</Text>
           <View style={styles.statsGrid}>
+            {/* This grid can be integrated with FITBIT for data inputation */}
             <View style={styles.statItem}>
               <Ionicons name="flame" size={28} color="#EF4444" />
-              <Text style={styles.statValue}>1,240</Text>
+              {/* <Text style={styles.statValue}>1,240</Text> */}
               <Text style={styles.statLabel}>Calories</Text>
             </View>
             <View style={styles.statItem}>
               <Ionicons name="restaurant" size={28} color="#10B981" />
-              <Text style={styles.statValue}>3/3</Text>
+              {/* <Text style={styles.statValue}>3/3</Text> */}
               <Text style={styles.statLabel}>Meals</Text>
             </View>
             <View style={styles.statItem}>
               <Ionicons name="water" size={28} color="#3B82F6" />
-              <Text style={styles.statValue}>6/8</Text>
+              {/* <Text style={styles.statValue}>6/8</Text> */}
               <Text style={styles.statLabel}>Glasses</Text>
             </View>
           </View>
@@ -189,18 +112,6 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
         </View>
-
-        {/* Motivational Tip */}
-        <View style={styles.tipCard}>
-          <Ionicons name="bulb" size={24} color="#F59E0B" />
-          <View style={styles.tipContent}>
-            <Text style={styles.tipTitle}>Daily Tip</Text>
-            <Text style={styles.tipText}>
-              Drink water before meals to help control portion sizes and stay hydrated.
-            </Text>
-          </View>
-        </View>
-
       </ScrollView>
     </SafeAreaView>
   );
