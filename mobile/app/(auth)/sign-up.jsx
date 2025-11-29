@@ -16,6 +16,7 @@ const SignUpScreen = () => {
     // if there is a missspelling of the class useSignUp, the click on buttom sign up 
     // will not work. useSignUp is a class call.
     const { isLoaded, signUp} = useSignUp();
+    const [ name, setName] = useState("");
     const [ email, setEmail] = useState("");
     const [ password, setPassword] = useState("");
     const [ showPassword, setShowPassword] = useState(false);
@@ -83,6 +84,17 @@ return(
                 <Text style={authStyles.title}> Create Account</Text>
                 
                 <View style={authStyles.formContainer}>
+                    {/* Test of user name */}
+                    <View style={authStyles.inputContainer}>
+                        <TextInput
+                        style={authStyles.textInput}
+                        placeholder='Enter name '
+                        placeholderTextColor={COLORS.textLight}
+                        value={name}
+                        onChangeText={setName}
+                        keyboardType="name"
+                        autoCapitalize='none'/>
+                    </View>
                     {/* Define email input */}
                     <View style={authStyles.inputContainer}>
                         <TextInput
