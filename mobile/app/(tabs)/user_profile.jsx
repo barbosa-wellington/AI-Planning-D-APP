@@ -128,10 +128,10 @@ export default function UserProfile() {
 
         <TouchableOpacity 
           style={styles.navButton}
-          onPress={() => router.push('/user_settings/settings')}
+          onPress={() => router.push('/user_settings/details')}
         >
           <Ionicons name="settings-outline" size={24} color="#3B82F6" />
-          <Text style={styles.buttonText}>Settings</Text>
+          <Text style={styles.buttonText}>Details</Text>
           <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
         </TouchableOpacity>
       </View>
