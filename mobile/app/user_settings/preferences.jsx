@@ -32,6 +32,8 @@ import {
   Platform,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
+
 
 const COLORS = {
   background: '#F9FAFB',
@@ -70,6 +72,9 @@ export default function DietaryPreferences() {
     });
   };
 
+    const router = useRouter();
+  
+
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
@@ -80,6 +85,13 @@ export default function DietaryPreferences() {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.scrollContent}
         >
+
+           {/* Define router for back arrow */}
+                    <TouchableOpacity
+                      onPress={() => router.push("/user_profile")}
+                  activeOpacity={0.8}>
+                <Ionicons name="arrow-back" size={30} color="#10B981" />
+              </TouchableOpacity>
           {/* Header */}
           <View style={styles.header}>
             <Ionicons name="restaurant-outline" size={48} color={COLORS.primary} />

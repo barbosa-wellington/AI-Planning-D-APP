@@ -30,6 +30,8 @@ import {
   Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
+import { use } from 'react';
 
 export default function UserProfile() {
   const [profile, setProfile] = useState({
@@ -39,6 +41,8 @@ export default function UserProfile() {
     weight: '',
     height: '',
   });
+
+  const router = useRouter();
 
   const [isEditing, setIsEditing] = useState(false);
 
@@ -67,8 +71,15 @@ export default function UserProfile() {
     <SafeAreaView style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Header */}
+
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>Personal details</Text>
+
+          {/* Define router for back arrow */}
+          <TouchableOpacity
+            onPress={() => router.push("/user_profile")}
+        activeOpacity={0.8}>
+      <Ionicons name="arrow-back" size={30} color="#10B981" />
+    </TouchableOpacity>
           <TouchableOpacity 
             onPress={() => setIsEditing(!isEditing)}
             style={styles.editButton}

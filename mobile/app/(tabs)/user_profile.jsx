@@ -73,14 +73,20 @@ import {
   TouchableOpacity,
   SafeAreaView,
   Alert,
+  Image
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useAuth } from '@clerk/clerk-expo';
+import { useAuth, useUser } from '@clerk/clerk-expo';
 
 export default function UserProfile() {
   const router = useRouter();
   const { signOut } = useAuth();
+  const { user } = useUser();
+
+  const useravatar = user.imageUrl;
+
+
 
   const handleLogout = () => {
     Alert.alert(
@@ -99,11 +105,11 @@ export default function UserProfile() {
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Profile Image */}
-      <View style={styles.profileImageContainer}>
-        <View style={styles.profileImage}>
-          <Ionicons name="person" size={80} color="#6B7280" />
-        </View>
+      
+      
+      <View style={styles.buttonContainer}>
+          <Image source={{uri:useravatar}} style={styles.avatar}/>
+
       </View>
 
       {/* Navigation Buttons */}
@@ -213,4 +219,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#FFFFFF',
   },
+  avatar: {
+    width: 100,
+    height: 100,
+    borderRadius: 100,
+    marginBottom: -3,
+  }
 });
