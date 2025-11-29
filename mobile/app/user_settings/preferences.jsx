@@ -77,21 +77,25 @@ export default function DietaryPreferences() {
 
   return (
     <SafeAreaView style={styles.container}>
+      
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         style={styles.keyboardView}
+        
       >
+        
         <ScrollView 
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.scrollContent}
+        
         >
-
-           {/* Define router for back arrow */}
+ {/* Define router for back arrow */}
                     <TouchableOpacity
                       onPress={() => router.push("/user_profile")}
                   activeOpacity={0.8}>
                 <Ionicons name="arrow-back" size={30} color="#10B981" />
               </TouchableOpacity>
+          
           {/* Header */}
           <View style={styles.header}>
             <Ionicons name="restaurant-outline" size={48} color={COLORS.primary} />
@@ -106,6 +110,7 @@ export default function DietaryPreferences() {
             
             {/* Dietary Restrictions */}
             <View style={styles.fieldContainer}>
+              
               <View style={styles.labelContainer}>
                 <Ionicons name="nutrition-outline" size={20} color={COLORS.textLight} />
                 <Text style={styles.label}>Dietary Restrictions</Text>
