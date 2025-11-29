@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, Image, ImageBackground, Dimensions, StyleSheet, Animated } from "react-native";
+import { View, Text, Image, ImageBackground, TouchableOpacity, Dimensions, StyleSheet, Animated } from "react-native";
 import { useRouter } from "expo-router";
 import { baseStyles } from "../assets/styles/base";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function Splash() {
   const router = useRouter();
@@ -42,6 +43,15 @@ export default function Splash() {
       <View style={styles.progressContainer}>
         <Animated.View style={[styles.progressBar, { width: progressBarWidth }]} />
       </View>
+
+      {/* Arrow Button */}
+      <TouchableOpacity
+        style={baseStyles.arrowButton} // use baseStyles
+        onPress={() => router.push("/sign-in")}
+        activeOpacity={0.8}
+      >
+        <Ionicons name="arrow-forward-circle" size={64} color="#fff" />
+      </TouchableOpacity>
     </ImageBackground>
   );
 }
