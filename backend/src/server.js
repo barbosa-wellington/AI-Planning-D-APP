@@ -128,7 +128,7 @@ app.delete("/api/favorites/:userId/:recipeId", async (req, res) => {
 
 app.post("/api/diets", async (req,res) => {
     try {
-        const { diet_title, time_diet, time_meal, calories, protein, carbs, fat, ingridients, instructions} = req.body;
+        const { diet_title, time_diet, time_meal, calories, protein, carbs, fat, ingredients, instructions} = req.body;
 
         // if (!diet_title || !calories){
         //     return res.status(400).json({ error: "Missing required fields - this is wrongs"});
@@ -144,7 +144,7 @@ app.post("/api/diets", async (req,res) => {
                 protein,
                 carbs,
                 fat,
-                ingridients,
+                ingredients,
                 instructions,
             }).returning();
             

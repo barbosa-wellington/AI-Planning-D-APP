@@ -22,7 +22,7 @@ import { View, Text, FlatList, TextInput, TouchableOpacity, StyleSheet, Keyboard
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
-import DietPlanCard from "../testing/ai_response_diet"; // adjust path if needed
+import DietPlanCard from "../ai_settings/full_dietplanCard"; // adjust path if needed
 
 // TODO: set this for your environment:
 const MACHINE = "192.168.4.32";
@@ -149,9 +149,9 @@ const handleSaveMeal = async (meal) => {
     console.log("🔧 [SAVE] Meal object received:", meal);
 
     // Turn ingredients & instructions arrays into strings for DB
-    const ingridientsText = Array.isArray(meal.ingridients)
-      ? meal.ingridients.join("\n")
-      : meal.ingridients || "";
+    const ingredientsText = Array.isArray(meal.ingridients || meal.ingredients)
+      ? (meal.ingridients || meal.ingredients).join("\n")
+      : meal.ingridients || meal.ingredients || "";
 
     const instructionsText = Array.isArray(meal.instructions)
       ? meal.instructions.join("\n")
@@ -166,7 +166,7 @@ const handleSaveMeal = async (meal) => {
       protein: meal.protein,
       carbs: meal.carbs,
       fat: meal.fat,
-      ingridients: ingridientsText,
+      ingredients: ingredientsText,
       instructions: instructionsText,
     };
 

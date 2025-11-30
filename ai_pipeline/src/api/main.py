@@ -110,7 +110,7 @@ You MUST produce JSON that follows exactly this structure (conceptually):
       "protein": 20,
       "carbs": 40,
       "fat": 15,
-      "ingridients": [
+      "ingredients": [
         "1/2 cup rolled oats",
         "1 cup almond milk",
         "1/4 cup blueberries",
