@@ -31,13 +31,16 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useUser } from '@clerk/clerk-expo';
 import { use } from 'react';
 
 export default function UserProfile() {
+
+  const { user } = useUser();
   const [profile, setProfile] = useState({
-    name: '',
-    surname: '',
-    email: '',
+    name: user.firstName,
+    surname: user.lastName,
+    email: user.emailAddresses,
     weight: '',
     height: '',
   });
