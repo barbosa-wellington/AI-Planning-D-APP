@@ -24,7 +24,7 @@ export default function FitbitIntegrationScreen() {
 
 
 const handlePress = async () => {
-    const url = 'https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=23TQDR&scope=activity+cardio_fitness+electrocardiogram+heartrate+irregular_rhythm_notifications+location+nutrition+oxygen_saturation+profile+respiratory_rate+settings+sleep+social+temperature+weight&redirect_uri=http%3A%2F%2Flocalhost%3A8081%2Fhome_screen'; // Replace with your desired URL
+    const url = "https://www.fitbit.com/oauth2/authorize?response_type=code&client_id=23TQDR&scope=activity+cardio_fitness+heartrate+nutrition+profile+sleep+weight&redirect_uri=https%3A%2F%2Fpreindulgent-romelia-unreputable.ngrok-free.dev%2Ffitbit%2Fcallback&code_challenge=Su9OOtJ919d2BrZ0mWcOQwr9XA70hVQGDVtOTB4of_0&code_challenge_method=S256&state=xyz123"; // Replace with your desired URL
     const supported = await Linking.canOpenURL(url);
 
     if (supported) {
