@@ -7,7 +7,7 @@ This project was developed as part of the Work Integrated Learning at university
 
 
 <p align='center'>
-<img src='AI-Planning-D-APP/mobile/assets/images/dietly-logo-v2.png' width="150" height="150" alt="App Logo" />
+<img src='mobile/assets/images/dietly-logo-v2.png' width="150" height="150" alt="App Logo" />
 </p>
 
 <h1 align="center">Dietly - Powerful Open-Source Multi-Model AI Chat Platform</h1>
