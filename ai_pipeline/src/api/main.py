@@ -343,7 +343,7 @@ You MUST respond with JSON matching this schema exactly:
 
 [
   {
-    "diet_plan": "string",
+    "diet_plan": "title for this dietplan",
     "time_diet": "Breakfast | Lunch | Dinner | Snack",
     "time_meal": "HH:MM-HH:MM",
     "calories": number,
