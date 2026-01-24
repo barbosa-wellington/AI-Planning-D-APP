@@ -32,3 +32,9 @@ This file contains the code implementation for the database using drizzle-kit to
 
 
 ## Ngrok for accessing Fitbit API
+
+The Ngrok is an alternative option to allow anyone to access Dietly from anywhere. (AWS)
+
+    To initialize the ngrok connection you need to ensure that you have the CORS and it is not blocking the access. Then you run the following command.
+    
+    # ngrok http 5001
