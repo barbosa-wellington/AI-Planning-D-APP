@@ -36,5 +36,13 @@ This file contains the code implementation for the database using drizzle-kit to
 The Ngrok is an alternative option to allow anyone to access Dietly from anywhere. (AWS)
 
     To initialize the ngrok connection you need to ensure that you have the CORS and it is not blocking the access. Then you run the following command.
-    
+
     # ngrok http 5001
+
+## FITBIT access API
+
+The fitbit is an external application that provides through user's authorization user's biometric and activity data. The API will only work once user's approval to access the data.
+
+    To access the key string for check user's biometric data just paste this link on your chosen browser.
+    
+    # http://192.168.4.32:5001/fitbit/authorize
