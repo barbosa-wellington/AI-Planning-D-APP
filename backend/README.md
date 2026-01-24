@@ -43,6 +43,15 @@ The Ngrok is an alternative option to allow anyone to access Dietly from anywher
 
 The fitbit is an external application that provides through user's authorization user's biometric and activity data. The API will only work once user's approval to access the data.
 
-    To access the key string for check user's biometric data just paste this link on your chosen browser.
-    
+    To access the key string for checking user's biometric data just paste this link on your chosen browser.
+
     # http://192.168.4.32:5001/fitbit/authorize
+
+    Then, copy the key on another browser tab
+
+    # this is an example of link
+    # https://preindulgent-romelia-unreputable.ngrok-free.dev/fitbit/callback?code=65a6a788fbb8662d43b97414b5c9df5ef914254e&state=VPOC76eJeA0RYQF4KbTxzg#_=_
+
+    After that, you can access via calling API any app options available using this link 
+
+    # https://preindulgent-romelia-unreputable.ngrok-free.dev/fitbit/profile
