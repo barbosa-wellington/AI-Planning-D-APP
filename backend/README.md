@@ -28,3 +28,7 @@ This file contains the code implementation for the database using drizzle-kit to
     To migrate the code using drizzle schema run the command:
 
     # npx drizzle-kit migrate
+
+
+
+## Ngrok for accessing Fitbit API

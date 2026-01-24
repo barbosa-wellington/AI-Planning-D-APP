@@ -24,6 +24,7 @@ This folder contains the endpoints for the access of the model. You can test the
 
     
     # uvicorn main:app --reload
+    # uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
     After running the command open on your chosen browser using the following url followed by your prompt to test the API and model.
 
