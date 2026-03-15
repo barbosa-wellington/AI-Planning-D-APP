@@ -1,0 +1,1 @@
+# This is the file scrip for image generator using sdlx diffusion Model
