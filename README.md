@@ -32,6 +32,13 @@ npm install
 npm run dev
 ```
 
+## 🔧 Run the Backend/Fitbit
+
+ngrok http 5001
+
+ # This will allow the fitbit to generate the trust link and API to consume the data.
+
+
 ## 📱 Run the Mobile App
 
 ```bash
@@ -40,6 +47,8 @@ npm install
 npm install -g expo-cli
 npx expo start
 ```
+
+
 
 # Technologies Stack
 
