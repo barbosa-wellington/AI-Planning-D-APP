@@ -49,6 +49,14 @@ npx expo start
 ```
 
 
+# Stabble Diffusion for recipe generation icon
+
+<p align='center'>
+<img src='ai_pipeline/image_generator/project_test.png' width="150" height="150" alt="App Logo" />
+</p>
+
+
+
 
 # Technologies Stack
 

@@ -1,6 +1,6 @@
 🚀 PROJECT: AI-Planning-D-APP
 📍 PATH: C:\Users\wellb\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 03/12/2025, 7:35:12 pm
+📅 GENERATED: 17/03/2026, 9:31:09 pm
 
 📁 PROJECT STRUCTURE:
 ==================================================
@@ -9,12 +9,20 @@
 ├── 📁 ai_pipeline/
 │   ├── 📄 .env.example (97B)
 │   ├── 📁 datasets/
+│   │   ├── 📄 daily_food_nutrition_dataset.csv (754.9KB)
 │   │   ├── 📄 FOOD-DATA-GROUP1.csv (95.5KB)
 │   │   ├── 📄 FOOD-DATA-GROUP2.csv (50.8KB)
 │   │   ├── 📄 FOOD-DATA-GROUP3.csv (96.1KB)
 │   │   ├── 📄 FOOD-DATA-GROUP4.csv (38.0KB)
 │   │   └── 📄 FOOD-DATA-GROUP5.csv (119.0KB)
 │   ├── 📄 environment.yml (2.2KB)
+│   ├── 📁 image_generator/
+│   │   ├── 📄 brazilian feijoada.png (722.6KB)
+│   │   ├── 📄 couscous with ossobuco abd broccoli.png (1018.2KB)
+│   │   ├── 📄 feijoada.png (1389.5KB)
+│   │   ├── 📄 margherita pizza .png (1315.7KB)
+│   │   ├── 📄 output_diet_icon.png (623.7KB)
+│   │   └── 📄 script.py (1.8KB)
 │   ├── 📁 notebooks/
 │   │   ├── 📁 .ipynb_checkpoints/
 │   │   │   ├── 📄 EDA-Data-checkpoint.ipynb (65.1KB)
@@ -22,7 +30,7 @@
 │   │   ├── 📄 EDA-Data.ipynb (64.8KB)
 │   │   ├── 📄 test.json (991B)
 │   │   └── 📄 Untitled.ipynb (3.2KB)
-│   ├── 📄 README.md (1.6KB)
+│   ├── 📄 README.md (1.9KB)
 │   ├── 📄 requirements.txt (121B)
 │   ├── 📄 requirements.yml (2.7KB)
 │   ├── 📁 src/
@@ -30,7 +38,7 @@
 │   │   │   ├── 📄 main.py (14.8KB)
 │   │   │   ├── 📁 routers/
 │   │   │   │   ├── 📄 generate.py (0B)
-│   │   │   │   └── 📄 health.py (118B)
+│   │   │   │   └── 📄 health.py (169B)
 │   │   ├── 📄 config.py (500B)
 │   │   └── 📁 models/
 │   │       ├── 📁 adapters/
@@ -55,7 +63,7 @@
 │   │   └── 📄 router.js (15.6KB)
 │   ├── 📄 package-lock.json (100.1KB)
 │   ├── 📄 package.json (630B)
-│   ├── 📄 README.md (1.1KB)
+│   ├── 📄 README.md (2.2KB)
 │   └── 📁 src/
 │       ├── 📁 config/
 │       │   ├── 📄 cron.js (542B)
@@ -142,7 +150,7 @@
 │   │   │   ├── 📄 preferences.jsx (8.3KB)
 │   │   │   └── 📄 settings.jsx (321B)
 │   │   └── 📄 _layout.tsx (2.0KB)
-│   ├── 📄 app.json (1.2KB)
+│   ├── 📄 app.json (1.3KB)
 │   ├── 📁 assets/
 │   │   ├── 📁 fonts/
 │   │   │   ├── 📄 Montserrat-Bold.ttf (193.4KB)
@@ -192,7 +200,7 @@
 │   │   └── 📄 colors.js (3.2KB)
 │   ├── 📄 eslint.config.js (247B)
 │   ├── 📄 expo-env.d.ts (110B)
-│   ├── 📄 package-lock.json (541.1KB)
+│   ├── 📄 package-lock.json (524.7KB)
 │   ├── 📄 package.json (1.5KB)
 │   ├── 📄 README.md (1.7KB)
 │   ├── 📁 services/
@@ -200,9 +208,9 @@
 │   └── 📄 tsconfig.json (259B)
 ├── 📄 package-lock.json (314.9KB)
 ├── 📄 package.json (56B)
-├── 📄 project-map.txt (13.0KB)
+├── 📄 project-map.txt (17.5KB)
 ├── 📄 project-mapper.js (5.5KB)
-└── 📄 README.md (1.3KB)
+└── 📄 README.md (1.4KB)
 
 📋 IMPORTANT FILE CONTENTS:
 ==================================================
@@ -459,6 +467,13 @@ npm install
 npm run dev
 ```
 
+## 🔧 Run the Backend/Fitbit
+
+ngrok http 5001
+
+ # This will allow the fitbit to generate the trust link and API to consume the data.
+
+
 ## 📱 Run the Mobile App
 
 ```bash
@@ -467,6 +482,8 @@ npm install
 npm install -g expo-cli
 npx expo start
 ```
+
+
 
 # Technologies Stack
 
