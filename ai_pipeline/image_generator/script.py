@@ -10,8 +10,9 @@ def generate_meal_image(meal_name):
     url = "http://127.0.0.1:7860/sdapi/v1/txt2img"
     
     payload = {
-        "prompt": f"A single isolated minimalist flat vector icon of {meal_name}, white background, professional style",
-        "negative_prompt": "text, words, blurry, realistic, shadow, grid",
+        # "prompt": f"A single isolated minimalist flat vector icon of {meal_name}, white background, professional style",
+        "prompt": f"Professional minimalist flat vector icon of {meal_name}, high-quality 2D graphic, vibrant studio lighting, clean sharp edges, solid white background, centered composition, masterwork, 8k resolution, trending on Dribbble, culinary app style",
+        "negative_prompt": "realistic, 3d, shadows, text, watermark, blurry, messy, complex background",
         "steps": 4,           
         "cfg_scale": 1.0, # SDXL Lightning usa CFG baixo (1 a 2)
         "width": 1024,
@@ -40,4 +41,4 @@ def generate_meal_image(meal_name):
         print(f"❌ Falha de conexão: {e}")
 
 if __name__ == "__main__":
-    generate_meal_image("feijoada")
+    generate_meal_image("margherita pizza ")
