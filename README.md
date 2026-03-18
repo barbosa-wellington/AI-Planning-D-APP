@@ -16,12 +16,12 @@ This project was developed as part of the Work Integrated Learning at university
 
 ## Features
 
-- ** Meal Image Generation **
-- ** Dietplan request **
-- ** Ingridient Description **
-- ** User avatar personalize **
-- ** dieplant catalogue **
-- ** diet preferences **
+    **Meal Image Generation**
+    **Dietplan request**
+    **Ingridient Description**
+    **User avatar personalize**
+    **dieplant catalogue**
+    **diet preferences**
 
 ## 🤖 Run the AI Service
 
