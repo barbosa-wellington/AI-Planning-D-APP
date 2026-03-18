@@ -17,6 +17,7 @@ This project was developed as part of the Work Integrated Learning at university
 ## Features
 
     **Meal Image Generation**
+- **Persistent Cookies** - Automatically refreshes cookies in background. Optimized for always-on services.
     **Dietplan request**
     **Ingridient Description**
     **User avatar personalize**
@@ -57,6 +58,10 @@ npx expo start
 
 
 # Stabble Diffusion for recipe generation icon
+
+### Example
+
+`prompt: Professional minimalist flat vector icon of {meal_name}, high-quality 2D graphic, vibrant studio lighting, clean sharp edges, solid white background, centered composition, masterwork, 8k resolution, trending on Dribbble, culinary app style`
 
 <p align='center'>
 <img src='ai_pipeline/image_generator/project_test.png' width="500" height="500" alt="App Logo" />
