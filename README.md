@@ -16,13 +16,12 @@ This project was developed as part of the Work Integrated Learning at university
 
 ## Features
 
-    **Meal Image Generation**
-- **Persistent Cookies** - Automatically refreshes cookies in background. Optimized for always-on services.
-    **Dietplan request**
-    **Ingridient Description**
-    **User avatar personalize**
-    **dieplant catalogue**
-    **diet preferences**
+- **Meal Image Generation** - Create image icon based on the generate dietplan main protein.
+- **Dietplan request** - Generate a simple dietplan for different time of the day
+- **Ingridient Description** - Deep analysis of ingridient composition and minerals
+- **User avatar personalize** - Personaliza avatar character
+- **dieplant catalogue** - Search for existing dietplans
+- **diet preferences** - Setting user preferences
 
 ## 🤖 Run the AI Service
 
@@ -57,7 +56,11 @@ npx expo start
 ```
 
 
-# Stabble Diffusion for recipe generation icon
+# Stable Diffusion for recipe generation icon
+
+Stable Diffusion is a cutting-edge technology that generates image based on given prompt. Dietly utilizes a small lightweight version of SDXL called SDXL-Lightning which is open-source found on Huggingface website. Several modification were implemented so that it could run in a small configured machine parallel to other dietly's services.
+ 
+
 
 ### Example
 
