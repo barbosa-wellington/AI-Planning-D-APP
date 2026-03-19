@@ -73,7 +73,7 @@ Stable Diffusion is a cutting-edge technology that generates image based on give
 
 
 
-# Technologies Stack
+<!-- # Technologies Stack
 
 The project is created with:
 *  Python: 3.9
@@ -85,4 +85,4 @@ The project is created with:
 *  Nodejs: 22.19.0
 *  Npm: 10.9.3
 *  npx expo: 54.0.13
-*  Ollama: 0.12.0
+*  Ollama: 0.12.0 -->
