@@ -17,7 +17,7 @@ This project was developed as part of the Work Integrated Learning at university
 
 
 <p align='center'>
-<img src='mobile/assets/images/dietly.png' width="500" height="500" alt="App Logo" />
+<img src='mobile/assets/images/dietly.png' width="1000" height="500" alt="App Logo" />
 </p>
 
 
