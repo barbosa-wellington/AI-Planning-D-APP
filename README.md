@@ -79,8 +79,13 @@ Stable Diffusion is a cutting-edge technology that generates image based on give
 </p>
 
 
+# Project Infrastruture - AWS 
 
+Dietly is hosted on AWS using a free-tier plan. The application has several services that are interconnected throught API Services. 
 
+<p align='center'>
+<img src='mobile/assets/images/Application-Architecture-Cloud.png' width="700" height="700" alt="App Logo" />
+</p>
 <!-- # Technologies Stack
 
 The project is created with:
