@@ -78,6 +78,10 @@ Stable Diffusion is a cutting-edge technology that generates image based on give
 <img src='ai_pipeline/image_generator/project_test.png' width="500" height="500" alt="App Logo" />
 </p>
 
+<p align='center'>
+<img src='ai_pipeline/image_generator/high-quality-sdx.png' width="500" height="500" alt="App Logo" />
+</p>
+
 
 # Project Infrastruture - AWS 
 
