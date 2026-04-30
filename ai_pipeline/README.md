@@ -11,6 +11,8 @@ Before working on this section, ensure that you are installed Anaconda Python an
     # pip install -r requirements.yml
 
     Now, you are good to go and use any feature on this application.
+
+
 ## Datasets
 
 This folder contains the dataset for basic LLM feed-forawrd data.
@@ -20,10 +22,14 @@ This folder contains the dataset for basic LLM feed-forawrd data.
 
 This folder contains the endpoints for the access of the model. You can test the APIs either via curl prompt or via Postman.
 
+    
+    Before proceed with this steps ensure that you have the Ollama server run on the backend, or any other LLM server otherwise when using the chat, it will return a network fail message.
+    
     On the terminal run the command above. It will load the unicorn library and an session will be initiate. By default you can access the application using the localhos and port 8000.
 
     
     # uvicorn main:app --reload
+    # uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
     After running the command open on your chosen browser using the following url followed by your prompt to test the API and model.
 
