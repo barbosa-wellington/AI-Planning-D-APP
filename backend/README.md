@@ -55,3 +55,21 @@ The fitbit is an external application that provides through user's authorization
     After that, you can access via calling API any app options available using this link 
 
     # https://preindulgent-romelia-unreputable.ngrok-free.dev/fitbit/profile
+
+    APIs Access:
+
+    Obtaining a simple snapshot of user biometric
+
+    https://preindulgent-romelia-unreputable.ngrok-free.dev/fitbit/health-snapshot
+
+    Obtaining a single data return
+
+    https://preindulgent-romelia-unreputable.ngrok-free.dev/fitbit/weight
+
+    Obtaining the values of calories burned on a day
+
+    https://preindulgent-romelia-unreputable.ngrok-free.dev/fitbit/calories-burned
+
+    Obtaining a full value return of API from the fitbit model
+
+    https://preindulgent-romelia-unreputable.ngrok-free.dev/fitbit/profile
