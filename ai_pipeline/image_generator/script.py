@@ -30,7 +30,7 @@ def generate_meal_image(meal_name):
             # IMPORTANTE: r['images'] é uma lista. Pegamos o índice [0]
             image_base64 = r['images'][0] 
             # "output_diet_icon.png"
-            with open(meal_name+".jpe", "wb") as f:
+            with open(meal_name+".png", "wb") as f:
                 f.write(base64.b64decode(image_base64))
             
             print(f"✅ Sucesso! Imagem {meal_name}.png' criada.")
@@ -41,4 +41,4 @@ def generate_meal_image(meal_name):
         print(f"❌ Falha de conexão: {e}")
 
 if __name__ == "__main__":
-    generate_meal_image("couscous with ossobuco abd broccoli")
+    generate_meal_image("pizza calabreza")
