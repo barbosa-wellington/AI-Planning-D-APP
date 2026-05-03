@@ -56,7 +56,7 @@ The fitbit is an external application that provides through user's authorization
 
     # https://preindulgent-romelia-unreputable.ngrok-free.dev/fitbit/profile
 
-    APIs Access:
+    APIs Endpoits:
 
     Obtaining a simple snapshot of user biometric
 
