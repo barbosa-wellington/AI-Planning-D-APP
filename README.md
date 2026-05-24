@@ -21,6 +21,17 @@ This project was developed as part of the Work Integrated Learning at university
 </p>
 
 
+<p align="left">
+  <img src="https://badgen.net/badge/python/3.12+/3776AB?icon=pypi" alt="Python 3.12+">
+ <img src="https://badgen.net/badge/postgresql/neon?icon=postgresql" alt="postgresql">
+  <img src="https://badgen.net/badge/LLM/Mistral/green" alt="LLM: Mistral">
+  <img src="https://badgen.net/badge/LLM/Gemma3/green" alt="LLM: Gemma3">
+  <img src="https://badgen.net/badge/LLM/phi3:mini/green" alt="LLM: phi3:mini">
+  <img src="https://badgen.net/badge/Stable-diffusion/SDXL-Lightning/orange" alt="ST: SDXL-Lightning">
+  <img src="https://badgen.net/badge/AWS/EC2-S3/blue" alt="AWS: EC2-S3">
+  <img src="https://badgen.net/badge/license/AGPL%203.0/green" alt="License: AGPL-3.0">
+  <br><br>
+</p>
 
 ## Features
 
