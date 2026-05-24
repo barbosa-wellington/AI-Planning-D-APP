@@ -1,6 +1,6 @@
 🚀 PROJECT: AI-Planning-D-APP
 📍 PATH: C:\Users\wellb\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 17/03/2026, 9:31:09 pm
+📅 GENERATED: 24/05/2026, 9:07:43 pm
 
 📁 PROJECT STRUCTURE:
 ==================================================
@@ -9,25 +9,56 @@
 ├── 📁 ai_pipeline/
 │   ├── 📄 .env.example (97B)
 │   ├── 📁 datasets/
-│   │   ├── 📄 daily_food_nutrition_dataset.csv (754.9KB)
-│   │   ├── 📄 FOOD-DATA-GROUP1.csv (95.5KB)
-│   │   ├── 📄 FOOD-DATA-GROUP2.csv (50.8KB)
-│   │   ├── 📄 FOOD-DATA-GROUP3.csv (96.1KB)
-│   │   ├── 📄 FOOD-DATA-GROUP4.csv (38.0KB)
-│   │   └── 📄 FOOD-DATA-GROUP5.csv (119.0KB)
+│   │   ├── 📁 bio/
+│   │   │   ├── 📄 calories_2026-04-01.csv (1561.8KB)
+│   │   │   ├── 📄 calories_2026-05-01.csv (124.8KB)
+│   │   │   ├── 📄 calories_in_heart_rate_zone_2026-04-01.csv (3115.6KB)
+│   │   │   ├── 📄 calories_in_heart_rate_zone_2026-05-01.csv (247.7KB)
+│   │   │   ├── 📄 calories_in_heart_rate_zone_readme.txt (620B)
+│   │   │   ├── 📄 calories_readme.txt (505B)
+│   │   │   ├── 📄 distance_2026-04-01.csv (327.7KB)
+│   │   │   ├── 📄 distance_2026-05-01.csv (16.7KB)
+│   │   │   ├── 📄 distance_readme.txt (506B)
+│   │   │   ├── 📄 hydration_log_2026-01-13.csv (119B)
+│   │   │   ├── 📄 hydration_log_readme.txt (598B)
+│   │   │   ├── 📄 steps_2026-05-01.csv (15.9KB)
+│   │   │   └── 📄 steps_readme.txt (504B)
+│   │   ├── 📁 dietplans/
+│   │   │   ├── 📄 diet_test.csv (34.9KB)
+│   │   │   └── 📄 diet_test.json (42.8KB)
+│   │   └── 📁 food/
+│   │       ├── 📄 daily_food_nutrition_dataset.csv (754.9KB)
+│   │       ├── 📄 FOOD-DATA-GROUP1.csv (95.5KB)
+│   │       ├── 📄 FOOD-DATA-GROUP2.csv (50.8KB)
+│   │       ├── 📄 FOOD-DATA-GROUP3.csv (96.1KB)
+│   │       ├── 📄 FOOD-DATA-GROUP4.csv (38.0KB)
+│   │       └── 📄 FOOD-DATA-GROUP5.csv (119.0KB)
 │   ├── 📄 environment.yml (2.2KB)
 │   ├── 📁 image_generator/
+│   │   ├── 📄 brazilian feijoada.jpe (576.2KB)
 │   │   ├── 📄 brazilian feijoada.png (722.6KB)
-│   │   ├── 📄 couscous with ossobuco abd broccoli.png (1018.2KB)
+│   │   ├── 📄 couscous with ossobuco abd broccoli.jpe (1733.8KB)
+│   │   ├── 📄 couscous with ossobuco abd broccoli.png (283.8KB)
+│   │   ├── 📄 couscous with ossobuco abd broccoli1.jpe (1411.0KB)
+│   │   ├── 📄 couscous with ossobuco abd broccoli1.png (1018.2KB)
 │   │   ├── 📄 feijoada.png (1389.5KB)
-│   │   ├── 📄 margherita pizza .png (1315.7KB)
+│   │   ├── 📄 high-quality-sdx.png (1272.8KB)
+│   │   ├── 📄 margherita pizza.png (1261.2KB)
+│   │   ├── 📄 margherita pizza1.png (1315.7KB)
 │   │   ├── 📄 output_diet_icon.png (623.7KB)
-│   │   └── 📄 script.py (1.8KB)
+│   │   ├── 📄 pizza .png (1370.7KB)
+│   │   ├── 📄 pizza calabreza.png (1393.9KB)
+│   │   ├── 📄 pizza peperoni.png (315.1KB)
+│   │   ├── 📄 pizza.png (1451.8KB)
+│   │   ├── 📄 pork ramen .png (1443.1KB)
+│   │   ├── 📄 project_test.png (317.3KB)
+│   │   ├── 📄 script.py (1.8KB)
+│   │   └── 📄 zucchini soup .png (471.2KB)
 │   ├── 📁 notebooks/
 │   │   ├── 📁 .ipynb_checkpoints/
-│   │   │   ├── 📄 EDA-Data-checkpoint.ipynb (65.1KB)
+│   │   │   ├── 📄 EDA-Data-checkpoint.ipynb (121.8KB)
 │   │   │   └── 📄 Untitled-checkpoint.ipynb (2.0KB)
-│   │   ├── 📄 EDA-Data.ipynb (64.8KB)
+│   │   ├── 📄 EDA-Data.ipynb (124.9KB)
 │   │   ├── 📄 test.json (991B)
 │   │   └── 📄 Untitled.ipynb (3.2KB)
 │   ├── 📄 README.md (1.9KB)
@@ -60,10 +91,11 @@
 │   ├── 📄 .gitignore (20B)
 │   ├── 📄 drizzle.config.js (351B)
 │   ├── 📁 fitbit/
+│   │   ├── 📄 data-analysis.py (486B)
 │   │   └── 📄 router.js (15.6KB)
 │   ├── 📄 package-lock.json (100.1KB)
 │   ├── 📄 package.json (630B)
-│   ├── 📄 README.md (2.2KB)
+│   ├── 📄 README.md (2.7KB)
 │   └── 📁 src/
 │       ├── 📁 config/
 │       │   ├── 📄 cron.js (542B)
@@ -171,12 +203,15 @@
 │   │   │   ├── 📄 android-icon-background.png (17.1KB)
 │   │   │   ├── 📄 android-icon-foreground.png (76.9KB)
 │   │   │   ├── 📄 android-icon-monochrome.png (4.0KB)
+│   │   │   ├── 📄 Application-Architecture-Cloud.png (1000.6KB)
 │   │   │   ├── 📄 ChatGPT Image Oct 4, 2025, 11_25_21 AM.png (1383.3KB)
 │   │   │   ├── 📄 Dietly-bg.png (3272.6KB)
 │   │   │   ├── 📄 dietly-logo-v2.png (302.2KB)
 │   │   │   ├── 📄 dietly-logo.png (1193.7KB)
+│   │   │   ├── 📄 dietly.png (605.3KB)
 │   │   │   ├── 📄 Dietly_logo_white.png (12.0KB)
 │   │   │   ├── 📄 favicon.png (1.1KB)
+│   │   │   ├── 📄 high-quality-sdx.png (1272.8KB)
 │   │   │   ├── 📄 icon.png (384.3KB)
 │   │   │   ├── 📄 partial-react-logo.png (5.0KB)
 │   │   │   ├── 📄 react-logo.png (6.2KB)
@@ -208,9 +243,9 @@
 │   └── 📄 tsconfig.json (259B)
 ├── 📄 package-lock.json (314.9KB)
 ├── 📄 package.json (56B)
-├── 📄 project-map.txt (17.5KB)
+├── 📄 project-map.txt (18.1KB)
 ├── 📄 project-mapper.js (5.5KB)
-└── 📄 README.md (1.4KB)
+└── 📄 README.md (3.2KB)
 
 📋 IMPORTANT FILE CONTENTS:
 ==================================================
@@ -451,6 +486,21 @@ This project was developed as part of the Work Integrated Learning at university
 
 
 
+<p align='center'>
+<img src='mobile/assets/images/dietly.png' width="1000" height="500" alt="App Logo" />
+</p>
+
+
+
+## Features
+
+- **Meal Image Generation** - Create image icon based on the generate dietplan main protein.
+- **Dietplan request** - Generate a simple dietplan for different time of the day
+- **Ingridient Description** - Deep analysis of ingridient composition and minerals
+- **User avatar personalize** - Personaliza avatar character
+- **dieplant catalogue** - Search for existing dietplans
+- **diet preferences** - Setting user preferences
+
 ## 🤖 Run the AI Service
 
 ```bash
@@ -484,8 +534,33 @@ npx expo start
 ```
 
 
+# Stable Diffusion for recipe generation icon
 
-# Technologies Stack
+Stable Diffusion is a cutting-edge technology that generates image based on given prompt. Dietly utilizes a small lightweight version of SDXL called SDXL-Lightning which is open-source found on Huggingface website. Several modification were implemented so that it could run in a small configured machine parallel to other dietly's services.
+ 
+
+
+### Example
+
+`prompt: Professional minimalist flat vector icon of {meal_name}, high-quality 2D graphic, vibrant studio lighting, clean sharp edges, solid white background, centered composition, masterwork, 8k resolution, trending on Dribbble, culinary app style`
+
+<p align='center'>
+<img src='ai_pipeline/image_generator/project_test.png' width="500" height="500" alt="App Logo" />
+</p>
+
+<p align='center'>
+<img src='ai_pipeline/image_generator/high-quality-sdx.png' width="500" height="500" alt="App Logo" />
+</p>
+
+
+# Project Infrastruture - AWS 
+
+Dietly is hosted on AWS using a free-tier plan. The application has several services that are interconnected throught API Services. 
+
+<p align='center'>
+<img src='mobile/assets/images/Application-Architecture-Cloud.png' width="700" height="700" alt="App Logo" />
+</p>
+<!-- # Technologies Stack
 
 The project is created with:
 *  Python: 3.9
@@ -497,7 +572,7 @@ The project is created with:
 *  Nodejs: 22.19.0
 *  Npm: 10.9.3
 *  npx expo: 54.0.13
-*  Ollama: 0.12.0
+*  Ollama: 0.12.0 -->
 
 ==================================================
 
