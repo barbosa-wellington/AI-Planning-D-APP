@@ -27,13 +27,21 @@ def generate_meal_image(meal_name):
         
         if response.status_code == 200:
             r = response.json()
-            # IMPORTANTE: r['images'] é uma lista. Pegamos o índice [0]
+            # IMPORTANTE: r['images'] é uma lista. Pegamos o índice [0] 
             image_base64 = r['images'][0] 
             # "output_diet_icon.png"
             with open(meal_name+".png", "wb") as f:
                 f.write(base64.b64decode(image_base64))
             
+            # file path to save the image on a folder images
+            file_path_folder = ("images/")
+            file_full_path = file_path_folder + f"{meal_name}.png"
+
+            with open(file_full_path, "wb") as s:
+                s.write(base64.b64decode(image_base64))
+
             print(f"✅ Sucesso! Imagem {meal_name}.png' criada.")
+
         else:
             print(f"❌ Erro {response.status_code}: {response.text}")
 
@@ -41,4 +49,4 @@ def generate_meal_image(meal_name):
         print(f"❌ Falha de conexão: {e}")
 
 if __name__ == "__main__":
-    generate_meal_image("pizza calabreza")
+    generate_meal_image("coca-cola zero")
