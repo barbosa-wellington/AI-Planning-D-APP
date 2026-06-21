@@ -1,35 +1,44 @@
 🚀 PROJECT: AI-Planning-D-APP
-📍 PATH: C:\Users\user\Documents\GitHub\AI-Planning-D-APP
-📅 GENERATED: 11/11/2025, 8:42:40 pm
+📍 PATH: C:\Users\wellb\Documents\GitHub\AI-Planning-D-APP
+📅 GENERATED: 17/03/2026, 9:31:09 pm
 
 📁 PROJECT STRUCTURE:
 ==================================================
-├── 📄 .gitattributes (66B)
+├── 📄 .gitattributes (68B)
+├── 📄 .gitignore (19B)
 ├── 📁 ai_pipeline/
 │   ├── 📄 .env.example (97B)
 │   ├── 📁 datasets/
+│   │   ├── 📄 daily_food_nutrition_dataset.csv (754.9KB)
 │   │   ├── 📄 FOOD-DATA-GROUP1.csv (95.5KB)
 │   │   ├── 📄 FOOD-DATA-GROUP2.csv (50.8KB)
 │   │   ├── 📄 FOOD-DATA-GROUP3.csv (96.1KB)
 │   │   ├── 📄 FOOD-DATA-GROUP4.csv (38.0KB)
 │   │   └── 📄 FOOD-DATA-GROUP5.csv (119.0KB)
 │   ├── 📄 environment.yml (2.2KB)
+│   ├── 📁 image_generator/
+│   │   ├── 📄 brazilian feijoada.png (722.6KB)
+│   │   ├── 📄 couscous with ossobuco abd broccoli.png (1018.2KB)
+│   │   ├── 📄 feijoada.png (1389.5KB)
+│   │   ├── 📄 margherita pizza .png (1315.7KB)
+│   │   ├── 📄 output_diet_icon.png (623.7KB)
+│   │   └── 📄 script.py (1.8KB)
 │   ├── 📁 notebooks/
 │   │   ├── 📁 .ipynb_checkpoints/
 │   │   │   ├── 📄 EDA-Data-checkpoint.ipynb (65.1KB)
 │   │   │   └── 📄 Untitled-checkpoint.ipynb (2.0KB)
-│   │   ├── 📄 EDA-Data.ipynb (63.2KB)
+│   │   ├── 📄 EDA-Data.ipynb (64.8KB)
 │   │   ├── 📄 test.json (991B)
 │   │   └── 📄 Untitled.ipynb (3.2KB)
-│   ├── 📄 README.md (1.6KB)
+│   ├── 📄 README.md (1.9KB)
 │   ├── 📄 requirements.txt (121B)
 │   ├── 📄 requirements.yml (2.7KB)
 │   ├── 📁 src/
 │   │   ├── 📁 api/
-│   │   │   ├── 📄 main.py (2.2KB)
+│   │   │   ├── 📄 main.py (14.8KB)
 │   │   │   ├── 📁 routers/
 │   │   │   │   ├── 📄 generate.py (0B)
-│   │   │   │   └── 📄 health.py (118B)
+│   │   │   │   └── 📄 health.py (169B)
 │   │   ├── 📄 config.py (500B)
 │   │   └── 📁 models/
 │   │       ├── 📁 adapters/
@@ -50,9 +59,11 @@
 ├── 📁 backend/
 │   ├── 📄 .gitignore (20B)
 │   ├── 📄 drizzle.config.js (351B)
-│   ├── 📄 package-lock.json (81.4KB)
-│   ├── 📄 package.json (526B)
-│   ├── 📄 README.md (154B)
+│   ├── 📁 fitbit/
+│   │   └── 📄 router.js (15.6KB)
+│   ├── 📄 package-lock.json (100.1KB)
+│   ├── 📄 package.json (630B)
+│   ├── 📄 README.md (2.2KB)
 │   └── 📁 src/
 │       ├── 📁 config/
 │       │   ├── 📄 cron.js (542B)
@@ -60,43 +71,99 @@
 │       │   └── 📄 env.js (214B)
 │       ├── 📁 db/
 │       │   ├── 📁 migrations/
-│       │   │   ├── 📄 0000_remarkable_sunset_bain.sql (236B)
+│       │   │   ├── 📄 0000_remarkable_sunset_bain.sql (246B)
+│       │   │   ├── 📄 0001_clumsy_tyrannus.sql (241B)
+│       │   │   ├── 📄 0001_glossy_masked_marvel.sql (244B)
+│       │   │   ├── 📄 0001_little_rage.sql (241B)
+│       │   │   ├── 📄 0002_loose_nomad.sql (29B)
+│       │   │   ├── 📄 0002_testTable.sql (26B)
+│       │   │   ├── 📄 0003_cool_dazzler.sql (241B)
+│       │   │   ├── 📄 0003_next_songbird.sql (241B)
+│       │   │   ├── 📄 0004_testTable.sql (26B)
+│       │   │   ├── 📄 0005_lowly_black_crow.sql (241B)
+│       │   │   ├── 📄 0006_testTable.sql (26B)
+│       │   │   ├── 📄 0007_great_mysterio.sql (241B)
+│       │   │   ├── 📄 0008_testTable.sql (26B)
+│       │   │   ├── 📄 0009_productive_wolverine.sql (241B)
+│       │   │   ├── 📄 0010_testTable.sql (26B)
+│       │   │   ├── 📄 0011_slimy_paper_doll.sql (241B)
+│       │   │   ├── 📄 0012_eager_robbie_robertson.sql (26B)
+│       │   │   ├── 📄 0013_shocking_famine.sql (285B)
+│       │   │   ├── 📄 0014_normal_the_leader.sql (62B)
+│       │   │   ├── 📄 0015_jazzy_power_man.sql (1.2KB)
+│       │   │   ├── 📄 0016_classy_nitro.sql (4.4KB)
+│       │   │   ├── 📄 0017_neat_molly_hayes.sql (5.6KB)
+│       │   │   ├── 📄 0018_little_surge.sql (1.3KB)
 │       │   │   └── 📁 meta/
-│       │   │       ├── 📄 0000_snapshot.json (1.8KB)
-│       │   │       └── 📄 _journal.json (216B)
-│       │   └── 📄 schema.js (619B)
-│       └── 📄 server.js (2.8KB)
+│       │   │       ├── 📄 0000_snapshot.json (1.9KB)
+│       │   │       ├── 📄 0001_snapshot.json (3.4KB)
+│       │   │       ├── 📄 0002_snapshot.json (1.9KB)
+│       │   │       ├── 📄 0009_snapshot.json (3.4KB)
+│       │   │       ├── 📄 0010_snapshot.json (1.9KB)
+│       │   │       ├── 📄 0011_snapshot.json (3.4KB)
+│       │   │       ├── 📄 0012_snapshot.json (1.9KB)
+│       │   │       ├── 📄 0013_snapshot.json (3.5KB)
+│       │   │       ├── 📄 0014_snapshot.json (3.7KB)
+│       │   │       ├── 📄 0015_snapshot.json (8.7KB)
+│       │   │       ├── 📄 0016_snapshot.json (19.1KB)
+│       │   │       ├── 📄 0017_snapshot.json (35.3KB)
+│       │   │       ├── 📄 0018_snapshot.json (31.9KB)
+│       │   │       └── 📄 _journal.json (2.8KB)
+│       │   └── 📄 schema.js (7.4KB)
+│       └── 📄 server.js (4.7KB)
 ├── 📁 mobile/
 │   ├── 📁 .cursor/
-│   │   └── 📄 mcp.json (196B)
+│   │   └── 📄 mcp.json (206B)
 │   ├── 📄 .gitignore (502B)
 │   ├── 📁 app/
 │   │   ├── 📁 (auth)/
 │   │   │   ├── 📄 sign-in.jsx (6.2KB)
-│   │   │   ├── 📄 sign-up.jsx (6.4KB)
+│   │   │   ├── 📄 sign-up.jsx (7.0KB)
 │   │   │   ├── 📄 verify-email.jsx (4.8KB)
 │   │   │   └── 📄 _layout.tsx (491B)
 │   │   ├── 📁 (tabs)/
-│   │   │   ├── 📄 ai_assistant.jsx (6.0KB)
-│   │   │   ├── 📄 dietplan_search.jsx (299B)
-│   │   │   ├── 📄 home_screen.jsx (2.0KB)
-│   │   │   ├── 📄 user_profile.jsx (1.4KB)
+│   │   │   ├── 📄 ai_assistant.jsx (9.7KB)
+│   │   │   ├── 📄 dietplan_search.jsx (4.1KB)
+│   │   │   ├── 📄 home_screen.jsx (7.9KB)
+│   │   │   ├── 📄 user_profile.jsx (5.7KB)
 │   │   │   └── 📄 _layout.jsx (3.3KB)
 │   │   ├── 📁 ai_settings/
-│   │   ├── 📄 index.jsx (1.7KB)
+│   │   │   ├── 📄 brief_dietplanCard.jsx (5.1KB)
+│   │   │   ├── 📄 chat.jsx (305B)
+│   │   │   └── 📄 full_dietplanCard.jsx (8.1KB)
+│   │   ├── 📄 extra_recipes.jsx (280B)
+│   │   ├── 📄 get-started.jsx (1.4KB)
+│   │   ├── 📄 index.jsx (2.2KB)
+│   │   ├── 📄 personalysed.jsx (277B)
 │   │   ├── 📁 screens/
-│   │   │   ├── 📄 daily_meal.jsx (271B)
-│   │   │   └── 📄 favorites.jsx (325B)
+│   │   │   └── 📄 daily_meal.jsx (271B)
 │   │   ├── 📁 testing/
-│   │   │   ├── 📄 ai_response_diet.jsx (4.1KB)
 │   │   │   ├── 📄 arvy.jsx (264B)
 │   │   │   ├── 📄 Shalini.jsx (268B)
 │   │   │   ├── 📄 shameem.jsx (269B)
 │   │   │   └── 📄 wellington.jsx (276B)
 │   │   ├── 📁 user_settings/
-│   │   └── 📄 _layout.tsx (1.4KB)
-│   ├── 📄 app.json (1.2KB)
+│   │   │   ├── 📄 account.jsx (316B)
+│   │   │   ├── 📄 details.jsx (6.8KB)
+│   │   │   ├── 📄 favorites.jsx (2.5KB)
+│   │   │   ├── 📄 fitbit.jsx (4.4KB)
+│   │   │   ├── 📄 preferences.jsx (8.3KB)
+│   │   │   └── 📄 settings.jsx (321B)
+│   │   └── 📄 _layout.tsx (2.0KB)
+│   ├── 📄 app.json (1.3KB)
 │   ├── 📁 assets/
+│   │   ├── 📁 fonts/
+│   │   │   ├── 📄 Montserrat-Bold.ttf (193.4KB)
+│   │   │   ├── 📄 Montserrat-Light.ttf (193.4KB)
+│   │   │   ├── 📄 Montserrat-Medium.ttf (193.5KB)
+│   │   │   ├── 📄 Montserrat-Regular.ttf (193.3KB)
+│   │   │   ├── 📄 Montserrat-SemiBold.ttf (193.6KB)
+│   │   │   ├── 📄 Poppins-Bold.ttf (146.8KB)
+│   │   │   ├── 📄 Poppins-Light.ttf (152.5KB)
+│   │   │   ├── 📄 Poppins-Medium.ttf (149.3KB)
+│   │   │   ├── 📄 Poppins-Regular.ttf (151.0KB)
+│   │   │   ├── 📄 Poppins-SemiBold.ttf (148.0KB)
+│   │   │   └── 📄 ShorelinesScriptBold.otf (40.4KB)
 │   │   ├── 📁 images/
 │   │   │   ├── 📄 ai-icon-v1.png (4.0KB)
 │   │   │   ├── 📄 ai-icon.png (5.3KB)
@@ -105,8 +172,10 @@
 │   │   │   ├── 📄 android-icon-foreground.png (76.9KB)
 │   │   │   ├── 📄 android-icon-monochrome.png (4.0KB)
 │   │   │   ├── 📄 ChatGPT Image Oct 4, 2025, 11_25_21 AM.png (1383.3KB)
+│   │   │   ├── 📄 Dietly-bg.png (3272.6KB)
 │   │   │   ├── 📄 dietly-logo-v2.png (302.2KB)
 │   │   │   ├── 📄 dietly-logo.png (1193.7KB)
+│   │   │   ├── 📄 Dietly_logo_white.png (12.0KB)
 │   │   │   ├── 📄 favicon.png (1.1KB)
 │   │   │   ├── 📄 icon.png (384.3KB)
 │   │   │   ├── 📄 partial-react-logo.png (5.0KB)
@@ -120,6 +189,7 @@
 │   │   │   └── 📄 splash-icon.png (17.1KB)
 │   │   └── 📁 styles/
 │   │       ├── 📄 auth.styles.js (1.9KB)
+│   │       ├── 📄 base.js (653B)
 │   │       ├── 📄 favorites.styles.js (2.5KB)
 │   │       ├── 📄 home.styles.js (5.2KB)
 │   │       ├── 📄 recipe-details.styles.js (7.3KB)
@@ -128,18 +198,31 @@
 │   │   └── 📄 SafeScreen.jsx (594B)
 │   ├── 📁 constants/
 │   │   └── 📄 colors.js (3.2KB)
-│   ├── 📄 eslint.config.js (237B)
+│   ├── 📄 eslint.config.js (247B)
 │   ├── 📄 expo-env.d.ts (110B)
-│   ├── 📄 package-lock.json (547.7KB)
+│   ├── 📄 package-lock.json (524.7KB)
 │   ├── 📄 package.json (1.5KB)
 │   ├── 📄 README.md (1.7KB)
 │   ├── 📁 services/
 │   │   └── 📄 mealAPI.js (728B)
-│   └── 📄 tsconfig.json (242B)
+│   └── 📄 tsconfig.json (259B)
+├── 📄 package-lock.json (314.9KB)
+├── 📄 package.json (56B)
+├── 📄 project-map.txt (17.5KB)
 ├── 📄 project-mapper.js (5.5KB)
-└── 📄 README.md (704B)
+└── 📄 README.md (1.4KB)
 
 📋 IMPORTANT FILE CONTENTS:
+==================================================
+
+📄 package.json
+--------------
+{
+  "dependencies": {
+    "expo": "^54.0.25"
+  }
+}
+
 ==================================================
 
 📄 project-mapper.js
@@ -357,7 +440,48 @@ Testing project
 
 This project was developed as part of the Work Integrated Learning at university of Torrens. It present a practical application using a Large Language Model to build-up a personalized diet planning for users. This is a real-world problems and showcases skills in:
 
-Skills Showcased: Python, TensorFlow/Keras, JavaScript, PostGress, React, Model Training, Software Architecture, Technical Documentation
+
+<p align='center'>
+<img src='mobile/assets/images/dietly-logo-v2.png' width="150" height="150" alt="App Logo" />
+</p>
+
+<h1 align="center">Dietly - Powerful AI Diet chat Platform</h1>
+
+<p align="center">Dietly is a feature-rich application leveraging DietPlan generated by a local Ollama model with powerful search enhancement and tool calling capabilities to provide health diet plan for any type of meal.</p>
+
+
+
+## 🤖 Run the AI Service
+
+```bash
+cd ai
+cd src/api
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+## 🔧 Run the Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+## 🔧 Run the Backend/Fitbit
+
+ngrok http 5001
+
+ # This will allow the fitbit to generate the trust link and API to consume the data.
+
+
+## 📱 Run the Mobile App
+
+```bash
+cd mobile
+npm install
+npm install -g expo-cli
+npx expo start
+```
 
 
 

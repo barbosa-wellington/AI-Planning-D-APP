@@ -16,15 +16,26 @@
 // };
 // export default ai_assistant;
 
+
 import React, { useRef, useState } from "react";
 import { View, Text, FlatList, TextInput, TouchableOpacity, StyleSheet, KeyboardAvoidingView, Platform } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useBottomTabBarHeight } from "@react-navigation/bottom-tabs";
-
+import DietPlanCard from "../ai_settings/full_dietplanCard"; // adjust path if needed
 
 // TODO: set this for your environment:
-const BASE_URL = "http://localhost:8000"; // <-- replace with YOUR_PC_LAN_IP or emulator URL
+const MACHINE = "192.168.4.32";
+const BASE_URL = Platform.OS == "web" ? "http://localhost:8000" : `http://${MACHINE}:8000`; // <-- replace with YOUR_PC_LAN_IP or emulator URL
+
+
+const BACKEND_URL = Platform.OS == "web" ? "http://localhost:5001": `http://${MACHINE}:5001`; // ensure the service is up running
+
+// Simple helper: decide if this message should trigger a diet plan
+const isDietPlanRequest = (text) => {
+  const lower = text.toLowerCase();
+  return lower.includes("dietplan") || lower.includes("diet plan");
+};
 
 const initialMessages = [
   {
@@ -47,19 +58,62 @@ export default function AIAssistant() {
     requestAnimationFrame(() => listRef.current?.scrollToEnd({ animated: true }));
   };
 
+
+  
+
+
+
   const onSend = async () => {
-    const text = input.trim();
-    if (!text || loading) return;
+  const text = input.trim();
+  if (!text || loading) return;
 
-    // add user message
-    const userMsg = { id: `u-${Date.now()}`, role: "user", text, ts: Date.now() };
-    setMessages((prev) => [...prev, userMsg]);
-    setInput("");
-    scrollToEnd();
+      console.log("Platform", Platform.OS);
+      console.log("Base_URL in use:", BASE_URL);
+      console.log("Calling endpoint", isDietPlanRequest(text)? `${BASE_URL}/diet/plan` : `${BASE_URL}/generate`);
 
-    // call API
-    try {
-      setLoading(true);
+
+  // 1) Add user message
+  const userMsg = { id: `u-${Date.now()}`, role: "user", text, ts: Date.now() };
+  setMessages((prev) => [...prev, userMsg]);
+  setInput("");
+  scrollToEnd();
+
+  try {
+    setLoading(true);
+
+    // 2) Decide which endpoint to call
+    if (isDietPlanRequest(text)) {
+
+      // ---- CALL DIET PLAN API ----
+      const resp = await fetch(`${BASE_URL}/diet/plan`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ prompt: text }),
+      });
+
+      if (!resp.ok) {
+        const errText = await resp.text();
+        throw new Error(`HTTP ${resp.status}: ${errText}`);
+      }
+
+      const data = await resp.json();  // { recepies: [...] }
+
+      // For now, just show the JSON in the bubble so you see it's working
+      const firstMeal = data?.recepies?.[0];
+
+      const aiMsg = {
+        id: `a-${Date.now()}`,
+        role: "ai",
+        type: "diet_plan",   // 👈 new
+        meal: firstMeal,     // 👈 store the structured object
+        ts: Date.now(),
+      };
+
+      setMessages((prev) => [...prev, aiMsg]);
+      scrollToEnd();
+
+    } else {
+      // ---- CALL NORMAL CHAT API ----
       const resp = await fetch(`${BASE_URL}/generate`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -76,16 +130,89 @@ export default function AIAssistant() {
       const aiMsg = { id: `a-${Date.now()}`, role: "ai", text: aiText, ts: Date.now() };
       setMessages((prev) => [...prev, aiMsg]);
       scrollToEnd();
-    } catch (e) {
-      const errMsg = { id: `e-${Date.now()}`, role: "ai", text: `Error: ${e.message}`, ts: Date.now() };
-      setMessages((prev) => [...prev, errMsg]);
-    } finally {
-      setLoading(false);
     }
-  };
+  } catch (e) {
+    const errMsg = {
+      id: `e-${Date.now()}`,
+      role: "ai",
+      text: `Error: ${e.message}`,
+      ts: Date.now(),
+    };
+    setMessages((prev) => [...prev, errMsg]);
+  } finally {
+    setLoading(false);
+  }
+};
+
+const handleSaveMeal = async (meal) => {
+  try {
+    console.log("🔧 [SAVE] Meal object received:", meal);
+
+    // Turn ingredients & instructions arrays into strings for DB
+    const ingredientsText = Array.isArray(meal.ingridients || meal.ingredients)
+      ? (meal.ingridients || meal.ingredients).join("\n")
+      : meal.ingridients || meal.ingredients || "";
+
+    const instructionsText = Array.isArray(meal.instructions)
+      ? meal.instructions.join("\n")
+      : meal.instructions || "";
+
+    const payload = {
+      diet_title: meal.diet_plan,
+      time_diet: meal.time_diet,
+      time_meal: meal.time_meal,
+      
+      calories: meal.calories,
+      protein: meal.protein,
+      carbs: meal.carbs,
+      fat: meal.fat,
+      ingredients: ingredientsText,
+      instructions: instructionsText,
+    };
+
+    console.log("🔧 [SAVE] Backend URL:", `${BACKEND_URL}/api/diets`);
+    console.log("🔧 [SAVE] Payload being sent:", payload);
+
+    const resp = await fetch(`${BACKEND_URL}/api/diets`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    console.log("🔧 [SAVE] Response status:", resp.status);
+
+    if (!resp.ok) {
+      const err = await resp.text();
+      console.log("❌ [SAVE] Backend error text:", err);
+      throw new Error(`HTTP ${resp.status}: ${err}`);
+    }
+
+    // success message
+    setMessages((prev) => [
+      ...prev,
+      {
+        id: `save-${Date.now()}`,
+        role: "ai",
+        text: `✅ Saved "${meal.diet_plan}" to your plans.`,
+        ts: Date.now(),
+      },
+    ]);
+  } catch (e) {
+    console.log("❌ [SAVE] Final error:", e);
+    setMessages((prev) => [
+      ...prev,
+      {
+        id: `save-err-${Date.now()}`,
+        role: "ai",
+        text: `❌ Could not save plan: ${e.message}`,
+        ts: Date.now(),
+      },
+    ]);
+  }
+};
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#f9fafb" }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#f9fafb"}}>
       <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === "ios" ? "padding" : undefined}>
         {/* Header */}
         <View style={styles.header}>
@@ -99,11 +226,25 @@ export default function AIAssistant() {
           keyExtractor={(item) => item.id}
           contentContainerStyle={styles.listContent}
           onContentSizeChange={scrollToEnd}
-          renderItem={({ item }) => <Bubble text={item.text} role={item.role} />}
+          // renderItem={({ item }) => <Bubble text={item.text} role={item.role} />}
+  renderItem={({ item }) => {
+  if (item.type === "diet_plan") {
+    return (
+      <View style={styles.bubbleRow}>
+        <DietPlanCard
+          meal={item.meal}
+          onSave={handleSaveMeal}   // ✅ use the real handler
+        />
+      </View>
+    );
+  }
+
+  return <Bubble text={item.text} role={item.role} />;
+}}
         />
 
         {/* Input Bar */}
-        <View style={styles.inputBar}>
+        <View style={[styles.inputBar, {marginBottom: tabBarHeight -26 }]}>
           <TextInput
             style={styles.input}
             placeholder="Ask anything about your diet…"
